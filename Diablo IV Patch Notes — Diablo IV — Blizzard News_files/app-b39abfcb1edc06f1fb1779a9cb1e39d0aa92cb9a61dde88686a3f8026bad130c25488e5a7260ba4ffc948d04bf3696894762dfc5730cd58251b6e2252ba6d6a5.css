@@ -1,0 +1,5113 @@
+.Button,
+.Poll-button {
+  display: inline-block;
+  position: relative;
+  background-color: #0e86ca;
+  border: 1px solid #00aeff;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 50px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: color .2s, background-color .2s, border-color .2s
+}
+
+.Button:active,
+.Poll-button:active {
+  background-color: #095386;
+  border: 1px solid #095386;
+  color: hsla(0, 0%, 100%, .8)
+}
+
+.Button.is-disabled,
+.Button:disabled,
+.is-disabled.Poll-button,
+.Poll-button:disabled {
+  background-color: rgba(14, 134, 202, .2) !important;
+  border: 1px solid rgba(0, 174, 255, .2) !important;
+  color: hsla(0, 0%, 100%, .15) !important;
+  cursor: default
+}
+
+.Button.is-loading,
+.is-loading.Poll-button {
+  color: transparent !important
+}
+
+.Button.is-loading:before,
+.is-loading.Poll-button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 40px;
+  width: 40px;
+  -ms-transform: translate(-50%, -50%) scale(.8);
+  transform: translate(-50%, -50%) scale(.8);
+  background-image: url(components/Button/Button-loading40-7bb6bb4d0107f3335800e1923adaeae74480fcae693a8e4509a51fd26fd9f501d9974e027a0d1b3f2af16e465e4062c4ff7fa59330bb5884cdb7ffced06b94cd.png);
+  animation: Spinner-animationSmall .7s steps(20) infinite
+}
+
+body[data-device=desktop] .Button:not(:active):not(:disabled):not(.is-disabled):hover,
+body[data-device=desktop] .Poll-button:not(:active):not(:disabled):not(.is-disabled):hover {
+  background-color: #00aeff;
+  border: 1px solid #00aeff;
+  color: #fff
+}
+
+.Button--secondary,
+.Poll-button--back,
+.Poll-button--results {
+  background-color: rgba(0, 0, 0, .4);
+  border: 1px solid #00aeff;
+  color: #00aeff
+}
+
+.Button--secondary:active,
+.Poll-button--back:active,
+.Poll-button--results:active {
+  background-color: rgba(0, 0, 0, .4);
+  border: 1px solid rgba(27, 30, 39, .8);
+  color: #91e4ff
+}
+
+.Button--secondary.is-disabled,
+.Button--secondary:disabled,
+.is-disabled.Poll-button--back,
+.is-disabled.Poll-button--results,
+.Poll-button--back:disabled,
+.Poll-button--results:disabled {
+  background-color: rgba(0, 0, 0, .08) !important;
+  border: 1px solid rgba(0, 174, 255, .08) !important;
+  color: rgba(0, 174, 255, .21) !important
+}
+
+.Button--secondary.is-loading,
+.is-loading.Poll-button--back,
+.is-loading.Poll-button--results {
+  color: transparent !important
+}
+
+.Button--tertiary {
+  background-color: rgba(0, 0, 0, .2);
+  border: 1px solid hsla(0, 0%, 100%, .15);
+  color: #00aeff
+}
+
+.Button--tertiary:active {
+  background-color: rgba(0, 0, 0, .3);
+  border: 1px solid hsla(0, 0%, 100%, .15);
+  color: rgba(145, 228, 255, .8)
+}
+
+.Button--tertiary.is-disabled,
+.Button--tertiary:disabled {
+  background-color: rgba(0, 0, 0, .04) !important;
+  border: 1px solid hsla(0, 0%, 100%, .03) !important;
+  color: rgba(0, 174, 255, .15) !important
+}
+
+.Button--tertiary.is-loading {
+  color: transparent !important
+}
+
+.Button--flat {
+  color: #00aeff
+}
+
+.Button--flat,
+.Button--flat:active {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important
+}
+
+.Button--flat:active {
+  color: rgba(145, 228, 255, .8)
+}
+
+.Button--flat.is-disabled,
+.Button--flat:disabled {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  color: rgba(0, 174, 255, .15) !important
+}
+
+.Button--flat.is-loading {
+  color: transparent !important
+}
+
+body[data-device=desktop] .Button--secondary:not(:active):not(:disabled):not(.is-disabled):hover,
+body[data-device=desktop] .Poll-button--back:not(:active):not(:disabled):not(.is-disabled):hover,
+body[data-device=desktop] .Poll-button--results:not(:active):not(:disabled):not(.is-disabled):hover {
+  background-color: rgba(0, 0, 0, .4);
+  border: 1px solid #91e4ff;
+  color: #91e4ff
+}
+
+body[data-device=desktop] .Button--tertiary:not(:active):not(:disabled):not(.is-disabled):hover {
+  background-color: rgba(0, 0, 0, .2);
+  border: 1px solid hsla(0, 0%, 100%, .3);
+  color: #91e4ff
+}
+
+body[data-device=desktop] .Button--flat:not(:active):not(:disabled):not(.is-disabled):hover {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #91e4ff
+}
+
+.Button--xlarge {
+  font-size: 31.5px;
+  font-weight: 400;
+  padding: 15px 70px
+}
+
+.Button--xlarge.is-loading:before {
+  -ms-transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1.2)
+}
+
+.Button--large {
+  font-size: 22.5px;
+  font-weight: 400;
+  padding: 15px 50px
+}
+
+.Button--large.is-loading:before {
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1)
+}
+
+.Button--small,
+.Poll-button {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 7px 42px
+}
+
+.Button--small.is-loading:before,
+.is-loading.Poll-button:before {
+  -ms-transform: translate(-50%, -50%) scale(.6);
+  transform: translate(-50%, -50%) scale(.6)
+}
+
+.Button--xsmall {
+  font-size: 13.5px;
+  font-weight: 400;
+  padding: 4px 37px
+}
+
+.Button--xsmall.is-loading:before {
+  -ms-transform: translate(-50%, -50%) scale(.4);
+  transform: translate(-50%, -50%) scale(.4)
+}
+
+.Button--full {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px
+}
+
+.Button--adaptive {
+  display: block
+}
+
+@media (max-width:479px) {
+  .Button--adaptive {
+    padding-left: 10px;
+    padding-right: 10px
+  }
+}
+
+@media (min-width:480px) {
+  .Button--adaptive {
+    display: inline-block
+  }
+}
+
+@keyframes Spinner-animationDefault {
+  to {
+    background-position: -1600px top
+  }
+}
+
+.Poll.is-loading:after,
+.Poll.loading:after,
+.Spinner {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  background: url(components/Spinner/Spinner-bnet80-23f9083bcf8d9599211c1863396099d6063a55fa8e8bba8620875384117d4275e1d16926192b4d438b43ff4cd0b526a6c64e49b050dd1822166f3fec5eb3f0c2.png) 0 0;
+  animation: Spinner-animationDefault .7s steps(20) infinite
+}
+
+@keyframes Spinner-animationSmall {
+  to {
+    background-position: -800px top
+  }
+}
+
+.Poll.is-loading:after,
+.Poll.loading:after,
+.Spinner--small {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-image: url(components/Spinner/Spinner-bnet40-7bb6bb4d0107f3335800e1923adaeae74480fcae693a8e4509a51fd26fd9f501d9974e027a0d1b3f2af16e465e4062c4ff7fa59330bb5884cdb7ffced06b94cd.png);
+  animation: Spinner-animationSmall .7s steps(20) infinite
+}
+
+@keyframes News-fade-in {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes News-slide-left-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(2em)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes News-slide-right-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-2em)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes News-slide-up-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(2em)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.Page-container {
+  position: relative;
+  min-height: 100vh
+}
+
+.Pane--backgroundFade .Pane-backgroundGradient {
+  background: linear-gradient(0deg, rgba(0, 0, 0, .2) 0, transparent)
+}
+
+.Gallery-inner {
+  padding: 0
+}
+
+.GalleryItem {
+  display: block;
+  position: relative
+}
+
+@media (min-width:1200px) {
+  .GalleryItem--landing:last-child {
+    margin-right: 0
+  }
+}
+
+.FeaturedArticle-community {
+  color: hsla(0, 0%, 100%, .55);
+  display: block
+}
+
+.ArticleDetail {
+  position: relative;
+  min-height: 100px
+}
+
+.ArticleDetail-bylineBy {
+  margin-right: 10px
+}
+
+.ArticleDetail-bylineComments {
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: -.25em
+}
+
+.ArticleDetail-subHeadingContainer {
+  position: relative;
+  margin-top: -5px
+}
+
+.ArticleDetail-subHeadingLeft {
+  margin-top: 5px
+}
+
+@media (min-width:480px) {
+  .ArticleDetail-subHeadingLeft {
+    display: inline-block;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid hsla(0, 0%, 100%, .15)
+  }
+}
+
+.ArticleDetail-subHeadingRight {
+  margin-top: 5px
+}
+
+@media (min-width:480px) {
+  .ArticleDetail-subHeadingRight {
+    display: inline-block
+  }
+}
+
+.ArticleDetail-socialMediaLinksBarContainer {
+  display: inline-block;
+  height: 1.6em
+}
+
+.ArticleDetail-socialMediaLinksBar {
+  -ms-transform: translateY(-.2rem);
+  transform: translateY(-.2rem)
+}
+
+.ArticleDetail-cmsEditLink {
+  margin-top: 20px;
+  margin-left: -.25em
+}
+
+.ArticleDetail-heading {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+
+.ArticleDetail-headingBlock {
+  display: block
+}
+
+@media (max-width:991px) {
+  .ArticleDetail-headingBlock {
+    margin-top: 1.7rem
+  }
+}
+
+.Heading--articleByline,
+.Heading--articleSubheading {
+  color: hsla(0, 0%, 100%, .7)
+}
+
+.ArticleDetail-headingImageBlock {
+  display: block;
+  position: relative;
+  -ms-flex-order: -1;
+  order: -1;
+  margin: 0 -20px
+}
+
+@media (min-width:480px) {
+  .ArticleDetail-headingImageBlock {
+    margin: 0 -30px
+  }
+}
+
+@media (min-width:768px) {
+  .ArticleDetail-headingImageBlock {
+    -ms-flex-order: 0;
+    order: 0;
+    margin: 0 0 40px
+  }
+
+  .ArticleDetail-headingImageBlock:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid hsla(0, 0%, 100%, .15);
+    transition: color .2s, background-color .2s, border-color .2s;
+    pointer-events: none;
+    z-index: 1
+  }
+}
+
+#article-detail-container {
+  position: relative;
+  margin-top: -20px;
+  padding-top: 20px
+}
+
+.ResponsiveBlogs {
+  background: transparent
+}
+
+body .ResponsiveBlogs .link,
+body .ResponsiveBlogs .link:hover,
+body .ResponsiveBlogs .link:visited,
+body .ResponsiveBlogs a,
+body .ResponsiveBlogs a:hover,
+body .ResponsiveBlogs a:visited {
+  text-decoration: underline;
+  text-underline-position: under
+}
+
+#page-load-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(28, 37, 52, .5)
+}
+
+#page-load-overlay.is-active {
+  display: block
+}
+
+#page-load-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
+}
+
+#featured-articles.is-transition {
+  animation-name: News-slide-left-fade-in;
+  animation-duration: .3s;
+  animation-delay: 0;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-out
+}
+
+#featured-articles.is-transitionHold {
+  opacity: 0
+}
+
+#recent-articles-container.is-transition {
+  animation-name: News-slide-up-fade-in;
+  animation-duration: .3s;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-out
+}
+
+#recent-articles-container.is-transitionHold {
+  opacity: 0
+}
+
+#load-more-container {
+  min-height: 45px
+}
+
+#article-detail {
+  position: relative
+}
+
+#article-detail.is-transition {
+  animation-name: News-slide-up-fade-in;
+  animation-duration: .3s;
+  animation-delay: 0;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-out
+}
+
+#article-detail.is-transitionHold {
+  opacity: 0
+}
+
+#article-next-container.is-transition {
+  animation-name: News-slide-up-fade-in;
+  animation-duration: .3s;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-out
+}
+
+#article-next-container.is-transitionHold {
+  opacity: 0
+}
+
+#article-sidebar.is-transition .ArticleSidebar {
+  animation-name: News-slide-left-fade-in;
+  animation-duration: .3s;
+  animation-delay: .3s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-out
+}
+
+#article-sidebar.is-transitionHold .ArticleSidebar {
+  opacity: 0
+}
+
+#error-page-pane {
+  top: -8px
+}
+
+@media (min-width:768px) {
+  #error-page-pane {
+    top: auto
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0
+}
+
+.Button:not(:active):not(:disabled):not(.is-disabled):focus,
+.Poll-button:not(:active):not(:disabled):not(.is-disabled):focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: 2px
+}
+
+.SelectDropdown-listContainer.dropdown-menu.dropdown-menu {
+  width: auto !important
+}
+
+.SelectDropdown-listContainer.dropdown-menu .Scrollable-overview.overview {
+  position: relative
+}
+
+.Icon.ArticleCommentCount-icon {
+  margin-right: 2px
+}
+
+.Icon.ArticleCommentCount-icon svg {
+  bottom: -.5em
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7
+}
+
+@media (min-width:480px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon {
+    font-size: 16px
+  }
+}
+
+@media (min-width:768px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon {
+    font-size: 16px
+  }
+}
+
+@media (min-width:992px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon {
+    font-size: 16px
+  }
+}
+
+@media (min-width:1200px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon {
+    font-size: 18px
+  }
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.max-lines-1 {
+  max-height: 1.7em
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.max-lines-2 {
+  max-height: 3.4em
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.max-lines-3 {
+  max-height: 5.1em
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.max-lines-4 {
+  max-height: 6.8em
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.max-lines-5 {
+  max-height: 8.5em
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.flush-top {
+  margin-top: -.498rem
+}
+
+@media (min-width:480px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon.flush-top {
+    margin-top: -.498rem
+  }
+}
+
+@media (min-width:768px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon.flush-top {
+    margin-top: -.498rem
+  }
+}
+
+@media (min-width:992px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon.flush-top {
+    margin-top: -.498rem
+  }
+}
+
+@media (min-width:1200px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon.flush-top {
+    margin-top: -.498rem
+  }
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.flush-bottom {
+  margin-bottom: -.488rem
+}
+
+@media (min-width:480px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon.flush-bottom {
+    margin-bottom: -.488rem
+  }
+}
+
+@media (min-width:768px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon.flush-bottom {
+    margin-bottom: -.488rem
+  }
+}
+
+@media (min-width:992px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon.flush-bottom {
+    margin-bottom: -.488rem
+  }
+}
+
+@media (min-width:1200px) {
+  .ArticleCommentCount--fixedSize .ArticleCommentCount-icon.flush-bottom {
+    margin-bottom: -.488rem
+  }
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.multiline {
+  line-height: 1.4
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.multiline.max-lines-1 {
+  max-height: 1.4em
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.multiline.max-lines-2 {
+  max-height: 2.8em
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.multiline.max-lines-3 {
+  max-height: 4.2em
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.multiline.max-lines-4 {
+  max-height: 5.6em
+}
+
+.ArticleCommentCount--fixedSize .ArticleCommentCount-icon.multiline.max-lines-5 {
+  max-height: 7em
+}
+
+.ArticleCommentFooter-button {
+  width: 100%
+}
+
+.ArticleList {
+  margin: 0 -20px;
+  padding: 0
+}
+
+@media (min-width:480px) {
+  .ArticleList {
+    margin: 0 -30px
+  }
+}
+
+@media (min-width:768px) {
+  .ArticleList {
+    margin: 0
+  }
+}
+
+.ArticleListItem {
+  display: block;
+  position: relative;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid hsla(0, 0%, 100%, .15);
+  margin-top: -1px;
+  transition: background-color .2s, border-color .2s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.ArticleListItem:first-child {
+  border-top: 1px solid hsla(0, 0%, 100%, .15);
+  margin-top: 0
+}
+
+@media (min-width:480px) and (max-width:767px) {
+  .ArticleListItem {
+    padding-left: 30px;
+    padding-right: 30px
+  }
+}
+
+@media (min-width:768px) {
+  body[data-device=desktop] .ArticleListItem:hover {
+    background-color: hsla(0, 0%, 100%, .05);
+    border-color: rgba(0, 174, 255, .5)
+  }
+
+  body[data-device=desktop] .ArticleListItem:hover .ArticleListItem-content {
+    -ms-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+
+.ArticleListItem-content {
+  transition: transform .2s ease;
+  pointer-events: none
+}
+
+@media (min-width:768px) {
+  .ArticleListItem-content {
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px)
+  }
+}
+
+@media (min-width:768px) and (min-width:480px) and (max-width:767px) {
+  .ArticleListItem-content {
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px)
+  }
+}
+
+.ArticleListItem-imageGrid {
+  padding-right: 5px
+}
+
+@media (min-width:768px) {
+  .ArticleListItem-imageGrid {
+    padding-right: 10px
+  }
+}
+
+@media (min-width:1200px) {
+  .ArticleListItem-imageGrid {
+    padding-right: 20px
+  }
+}
+
+.ArticleListItem-title {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  line-height: 1.4;
+  margin-left: 0;
+  color: #fff;
+  font-weight: 400
+}
+
+@media (min-width:480px) {
+  .ArticleListItem-title {
+    font-size: 19.2px
+  }
+}
+
+@media (min-width:768px) {
+  .ArticleListItem-title {
+    font-size: 20px
+  }
+}
+
+@media (min-width:992px) {
+  .ArticleListItem-title {
+    font-size: 20px
+  }
+}
+
+@media (min-width:1200px) {
+  .ArticleListItem-title {
+    font-size: 22.5px
+  }
+}
+
+@media (min-width:480px) {
+  .ArticleListItem-title {
+    font-weight: 300
+  }
+}
+
+.ArticleListItem-subtitle {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+  width: 100%
+}
+
+.ArticleListItem-label {
+  position: relative;
+  display: table-cell;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, .55);
+  text-align: left;
+  width: 67%
+}
+
+.ArticleListItem-labelInner,
+.ArticleListItem-timestamp {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  margin-left: 0;
+  display: block;
+  font-size: 11px
+}
+
+@media (min-width:480px) {
+
+  .ArticleListItem-labelInner,
+  .ArticleListItem-timestamp {
+    font-size: 12.8px
+  }
+}
+
+@media (min-width:768px) {
+
+  .ArticleListItem-labelInner,
+  .ArticleListItem-timestamp {
+    font-size: 12.8px
+  }
+}
+
+@media (min-width:992px) {
+
+  .ArticleListItem-labelInner,
+  .ArticleListItem-timestamp {
+    font-size: 12.8px
+  }
+}
+
+@media (min-width:1200px) {
+
+  .ArticleListItem-labelInner,
+  .ArticleListItem-timestamp {
+    font-size: 14.4px
+  }
+}
+
+.ArticleListItem-labelInner {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.ArticleListItem-timestamp {
+  position: relative;
+  display: table-cell;
+  color: hsla(0, 0%, 100%, .55);
+  white-space: nowrap;
+  text-align: right;
+  width: 33%
+}
+
+@media (min-width:480px) {
+  .ArticleListItem-timestamp {
+    display: none
+  }
+}
+
+.ArticleListItem-image {
+  position: relative;
+  box-shadow: 0 8px 17px rgba(0, 0, 0, .1);
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%
+}
+
+.ArticleListItem-image:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid hsla(0, 0%, 100%, .15);
+  transition: color .2s, background-color .2s, border-color .2s;
+  pointer-events: none;
+  z-index: 1
+}
+
+.ArticleListItem-description {
+  display: none;
+  color: hsla(0, 0%, 100%, .55);
+  pointer-events: none
+}
+
+@media (min-width:768px) {
+  .ArticleListItem-description {
+    display: block
+  }
+}
+
+.ArticleListItem-footer {
+  display: none;
+  color: hsla(0, 0%, 100%, .55)
+}
+
+@media (min-width:480px) {
+  .ArticleListItem-footer {
+    display: block
+  }
+}
+
+.ArticleListItem-comments {
+  display: inline-block;
+  margin-right: 10px;
+  pointer-events: auto
+}
+
+.ArticleListItem-linkOverlay,
+.FeaturedArticle-linkOverlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  outline: none
+}
+
+.Card {
+  overflow: visible
+}
+
+.Card-content {
+  position: static
+}
+
+.ArticleSidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 350px
+}
+
+.ArticleSidebar-inner {
+  position: relative;
+  height: 100%;
+  max-height: 100vh;
+  overflow: hidden
+}
+
+.ArticleSidebar-content {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 10px
+}
+
+.ArticleSidebar.is-sticky .ArticleSidebar-inner {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 350px
+}
+
+.ArticleSidebar.is-max .ArticleSidebar-inner {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  width: 350px
+}
+
+.ArticleSidebar--scrollbarTrack:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 10px;
+  border: 1px solid hsla(0, 0%, 100%, .15);
+  border-left: 0;
+  pointer-events: none
+}
+
+.ArticleSidebar--scrollbarTrack:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 4px;
+  border-right: 1px solid hsla(0, 0%, 100%, .15);
+  pointer-events: none
+}
+
+.ArticleSidebarItem {
+  position: relative;
+  min-height: 80px;
+  background-color: hsla(0, 0%, 100%, .1);
+  border-bottom: 1px solid hsla(0, 0%, 100%, .15);
+  list-style-type: none;
+  transition: background-color .2s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+body[data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+.ArticleSidebarItem-content {
+  pointer-events: none
+}
+
+.ArticleSidebarItem-image {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 80px;
+  height: 50px;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat
+}
+
+.ArticleSidebarItem-image:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid hsla(0, 0%, 100%, .15);
+  transition: color .2s, background-color .2s, border-color .2s;
+  pointer-events: none;
+  z-index: 1
+}
+
+.ArticleSidebarItem-text {
+  padding: 15px;
+  padding-left: 110px
+}
+
+.ArticleSidebarItem-subtitle {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  padding: 0;
+  margin: 0
+}
+
+.ArticleSidebarItem-subtitleLeft {
+  position: relative;
+  display: table-cell;
+  width: 67%
+}
+
+.ArticleSidebarItem-community,
+.ArticleSidebarItem-timestamp {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  margin-left: 0;
+  font-size: 11px
+}
+
+.ArticleSidebarItem-community {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: hsla(0, 0%, 100%, .7);
+  display: block;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 100%
+}
+
+.ArticleSidebarItem-timestamp {
+  position: relative;
+  display: table-cell;
+  white-space: nowrap;
+  color: hsla(0, 0%, 100%, .7);
+  text-align: right;
+  width: 33%
+}
+
+.ArticleSidebarItem-title {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 12.8px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  margin-left: 0;
+  line-height: 1.4;
+  color: hsla(0, 0%, 100%, .8)
+}
+
+.ArticleSidebarItem-progress {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px
+}
+
+.ArticleSidebarItem-progressBar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00aeff;
+  transition: width .1s
+}
+
+.ArticleSidebarItem.is-focused {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+.ArticleSidebarItem.is-focused .ArticleSidebarItem-progress {
+  display: block
+}
+
+.Backdrop {
+  height: 100%;
+  min-height: 100vh;
+  z-index: -1
+}
+
+.Backdrop,
+.Backdrop-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0
+}
+
+.Backdrop-item {
+  display: none;
+  bottom: 0;
+  background-color: #012650;
+  background-position: top;
+  background-repeat: repeat-y
+}
+
+.Backdrop-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1000px;
+  background-position: bottom;
+  background-repeat: no-repeat
+}
+
+@media (max-width:767px) {
+  .Backdrop-inner {
+    top: -8px
+  }
+}
+
+.Backdrop-item {
+  opacity: 0
+}
+
+.Backdrop-item[data-theme=diablo2] {
+  background-color: #2e1110
+}
+
+.Backdrop-item[data-theme=diablo2] .Backdrop-inner {
+  height: 800px
+}
+
+.Backdrop-item[data-theme=diablo3] {
+  background-color: #2a0e0b
+}
+
+.Backdrop-item[data-theme=diablo3] .Backdrop-inner {
+  height: 800px
+}
+
+.Backdrop-item[data-theme=diablo4] {
+  background-color: #1b1915
+}
+
+.Backdrop-item[data-theme=diablo4] .Backdrop-inner {
+  height: 1080px
+}
+
+.Backdrop-item[data-theme=diablo-immortal] {
+  background-color: #220b0d
+}
+
+.Backdrop-item[data-theme=diablo-immortal] .Backdrop-inner {
+  height: 1080px
+}
+
+.Backdrop-item[data-theme=heroes-of-the-storm] {
+  background-color: #190938
+}
+
+.Backdrop-item[data-theme=heroes-of-the-storm] .Backdrop-inner {
+  height: 897px
+}
+
+.Backdrop-item[data-theme=hearthstone] {
+  background-color: #2d1b11
+}
+
+.Backdrop-item[data-theme=hearthstone] .Backdrop-inner {
+  height: 1000px
+}
+
+.Backdrop-item[data-theme=overwatch] {
+  background-color: #0f0f11
+}
+
+.Backdrop-item[data-theme=overwatch] .Backdrop-inner {
+  height: 1200px
+}
+
+.Backdrop-item[data-theme=starcraft2] {
+  background-color: #0e1b3e
+}
+
+.Backdrop-item[data-theme=starcraft2] .Backdrop-inner {
+  height: 1000px
+}
+
+.Backdrop-item[data-theme=starcraft] {
+  background-color: #040917
+}
+
+.Backdrop-item[data-theme=starcraft] .Backdrop-inner {
+  height: 1000px
+}
+
+.Backdrop-item[data-theme=world-of-warcraft] {
+  background-color: #281504
+}
+
+.Backdrop-item[data-theme=world-of-warcraft] .Backdrop-inner {
+  height: 1024px
+}
+
+.Backdrop-item[data-theme=blizzcon] {
+  background-color: #032749
+}
+
+.Backdrop-item[data-theme=blizzcon] .Backdrop-inner {
+  height: 1000px
+}
+
+.Backdrop-item[data-theme=warcraft3] {
+  background-color: #2f2f2f
+}
+
+.Backdrop-item[data-theme=warcraft3] .Backdrop-inner {
+  height: 1000px
+}
+
+.Backdrop-item[data-theme=battlenet] {
+  background-color: #15171e
+}
+
+.Backdrop-item[data-theme=battlenet] .Backdrop-inner {
+  height: 1000px
+}
+
+.Backdrop-item[data-theme=warcraftrumble] {
+  background-color: #38233b
+}
+
+.Backdrop-item[data-theme=warcraftrumble] .Backdrop-inner {
+  height: 1000px
+}
+
+.Backdrop-item.is-active {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+  animation-name: News-fade-in;
+  animation-duration: .2s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-out
+}
+
+.Backdrop-item.is-out {
+  z-index: 0
+}
+
+.Navigation-dropdownWrapper {
+  margin: 0
+}
+
+.SelectDropdown-toggle.dropdown-toggle {
+  padding: 0
+}
+
+.SelectDropdown-option {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.SelectDropdown-optionText {
+  color: hsla(0, 0%, 100%, .8);
+  display: block;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0;
+  margin-left: -44px;
+  margin-right: -17px;
+  padding-left: 44px;
+  padding-right: 17px;
+  position: relative;
+  z-index: 1
+}
+
+.SocialMediaLinksBar {
+  position: relative;
+  vertical-align: middle
+}
+
+.SocialMediaLinksBar:after,
+.SocialMediaLinksBar:before {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0
+}
+
+.SocialMediaLinksBar-container {
+  white-space: nowrap
+}
+
+@media (min-width:480px) {
+  .SocialMediaLinksBar-container {
+    text-align: center
+  }
+}
+
+.SocialMediaLinksBar--inverse {
+  background: #fdfeff;
+  color: rgba(0, 0, 0, .8)
+}
+
+.SocialMediaLinksBar-item {
+  display: inline-block;
+  margin: auto;
+  padding: 0 5px
+}
+
+.SocialMediaLinksBar-item:first-child {
+  padding-left: 0
+}
+
+.SocialMediaLinksBar-item:last-child {
+  padding-right: 0
+}
+
+.SocialMediaLinksBar-icon {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto
+}
+
+@media (min-width:480px) {
+  .SocialMediaLinksBar-icon {
+    font-size: 16px
+  }
+}
+
+@media (min-width:768px) {
+  .SocialMediaLinksBar-icon {
+    font-size: 16px
+  }
+}
+
+@media (min-width:992px) {
+  .SocialMediaLinksBar-icon {
+    font-size: 16px
+  }
+}
+
+@media (min-width:1200px) {
+  .SocialMediaLinksBar-icon {
+    font-size: 18px
+  }
+}
+
+.SocialMediaLinksBar-label {
+  text-align: center;
+  font-size: 12px
+}
+
+.SocialMediaLinksBar-icon+.SocialMediaLinksBar-label {
+  padding-top: 10px
+}
+
+.SocialMediaLinksBar--alignRight .SocialMediaLinksBar-container {
+  text-align: right
+}
+
+.SocialMediaLinksBar--compact {
+  display: inline-block
+}
+
+.SocialMediaLinksBar--compact .SocialMediaLinksBar-item {
+  padding: 0 5px
+}
+
+.SocialMediaLinksBar--compact .SocialMediaLinksBar-item:first-child {
+  padding-left: 0
+}
+
+.SocialMediaLinksBar--compact .SocialMediaLinksBar-item:last-child {
+  padding-right: 0
+}
+
+.SocialMediaLinksBar--compact .SocialMediaLinksBar-icon {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  bottom: .1em
+}
+
+.Poll {
+  padding: 0;
+  margin-top: 30px;
+  border: 1px solid
+}
+
+.Poll.is-loading .Poll-actions,
+.Poll.is-loading .Poll-interior,
+.Poll.is-loading .Poll-options,
+.Poll.is-loading .Poll-results,
+.Poll.loading .Poll-actions,
+.Poll.loading .Poll-interior,
+.Poll.loading .Poll-options,
+.Poll.loading .Poll-results {
+  display: none
+}
+
+.Poll-interior {
+  padding: 1.6em
+}
+
+@media (min-width:0) and (max-width:1px) {
+  .Poll-interior {
+    padding: 1.2em
+  }
+}
+
+.Poll-title {
+  margin-bottom: .6em;
+  margin-top: 0
+}
+
+.Poll-resultsRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around
+}
+
+.Poll-resultsColumnOne {
+  -ms-flex: 1 0 120px;
+  flex: 1 0 120px
+}
+
+.Poll-resultsColumnTwo {
+  -ms-flex: 0 1 1800px;
+  flex: 0 1 1800px
+}
+
+.Poll-resultsColumnThree {
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px
+}
+
+.Poll-resultsLabel {
+  margin-bottom: 15px;
+  margin-right: 10px;
+  height: 25px;
+  white-space: nowrap;
+  line-height: 1.3
+}
+
+.Poll-resultsBar {
+  width: 100%;
+  margin-bottom: 15px;
+  height: 25px
+}
+
+.Poll-resultsPercentage {
+  text-align: center;
+  margin-bottom: 15px;
+  height: 25px;
+  line-height: 1.3
+}
+
+.Poll-resultsBarResult {
+  height: 25px
+}
+
+.Poll-options {
+  margin: 13px 0 0
+}
+
+.Poll-optionsText {
+  margin-left: 27px;
+  height: 25px
+}
+
+.Poll-optionsLabel {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 15px;
+  height: 25px;
+  position: relative
+}
+
+.Poll-optionsRadio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer
+}
+
+.Poll-optionsRadio[type=radio]~.Poll-optionsCheckmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  border-radius: 12px;
+  border: 1px solid;
+  box-sizing: border-box;
+  cursor: pointer
+}
+
+.Poll-optionsRadio[type=radio]~.Poll-optionsCheckmark:after {
+  left: 5px;
+  top: 5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  display: none;
+  box-sizing: border-box
+}
+
+.Poll-optionsRadio[type=radio]:checked~.Poll-optionsCheckmark:after {
+  display: block
+}
+
+.Poll-optionsRadio[type=checkbox]~.Poll-optionsCheckmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  border: 1px solid;
+  box-sizing: border-box;
+  cursor: pointer
+}
+
+.Poll-optionsRadio[type=checkbox]~.Poll-optionsCheckmark:after {
+  left: 0;
+  top: 0;
+  height: 21px;
+  width: 21px;
+  content: "";
+  position: absolute;
+  display: none;
+  box-sizing: border-box
+}
+
+.Poll-optionsRadio[type=checkbox]:checked~.Poll-optionsCheckmark:after {
+  display: block
+}
+
+.Poll-actions {
+  padding: .8em;
+  margin: 0
+}
+
+.Poll-actions .Poll-button {
+  margin-top: 0;
+  margin-left: 10px
+}
+
+.Poll-actions .Poll.results-only {
+  margin-bottom: 1rem
+}
+
+.Poll-actionsUserVoted {
+  padding: .25em .5em
+}
+
+body[data-theme=blizzard] .Poll,
+body[data-theme=default] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=blizzard] .Poll-interior,
+body[data-theme=default] .Poll-interior {
+  background-color: rgba(0, 174, 255, .05)
+}
+
+body[data-theme=blizzard] .Poll-title,
+body[data-theme=default] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=blizzard] .Poll-subtitle--endsIn,
+body[data-theme=blizzard] .Poll-subtitle--endsOn,
+body[data-theme=default] .Poll-subtitle--endsIn,
+body[data-theme=default] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=blizzard] .Poll-resultsLabel,
+body[data-theme=default] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=blizzard] .Poll-resultsBar,
+body[data-theme=default] .Poll-resultsBar {
+  background: rgba(0, 174, 255, .05)
+}
+
+body[data-theme=blizzard] .Poll-resultsBarResult,
+body[data-theme=default] .Poll-resultsBarResult {
+  background-color: rgba(0, 174, 255, .5)
+}
+
+body[data-theme=blizzard] .Poll-resultsPercentage,
+body[data-theme=default] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=blizzard] .Poll-optionsText,
+body[data-theme=default] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=blizzard] .Poll-optionsCheckmark,
+body[data-theme=default] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=blizzard] .Poll-optionsCheckmark:after,
+body[data-theme=default] .Poll-optionsCheckmark:after {
+  background-color: rgba(0, 174, 255, .5)
+}
+
+body[data-theme=blizzard] .Poll-actions,
+body[data-theme=default] .Poll-actions {
+  background-color: rgba(0, 174, 255, .15)
+}
+
+body[data-theme=blizzard] .Poll-actionsUserVoted,
+body[data-theme=default] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=blizzard] .Poll.is-loading,
+body[data-theme=blizzard] .Poll.loading,
+body[data-theme=default] .Poll.is-loading,
+body[data-theme=default] .Poll.loading {
+  background-color: rgba(0, 174, 255, .05)
+}
+
+body[data-theme=diablo2] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=diablo2] .Poll-interior {
+  background-color: rgba(181, 56, 26, .05)
+}
+
+body[data-theme=diablo2] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=diablo2] .Poll-subtitle--endsIn,
+body[data-theme=diablo2] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo2] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo2] .Poll-resultsBar {
+  background: rgba(181, 56, 26, .05)
+}
+
+body[data-theme=diablo2] .Poll-resultsBarResult {
+  background-color: rgba(181, 56, 26, .5)
+}
+
+body[data-theme=diablo2] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo2] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo2] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=diablo2] .Poll-optionsCheckmark:after {
+  background-color: rgba(181, 56, 26, .5)
+}
+
+body[data-theme=diablo2] .Poll-actions {
+  background-color: rgba(181, 56, 26, .15)
+}
+
+body[data-theme=diablo2] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo2] .Poll.is-loading,
+body[data-theme=diablo2] .Poll.loading {
+  background-color: rgba(181, 56, 26, .05)
+}
+
+body[data-theme=diablo3] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=diablo3] .Poll-interior {
+  background-color: rgba(195, 65, 51, .05)
+}
+
+body[data-theme=diablo3] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=diablo3] .Poll-subtitle--endsIn,
+body[data-theme=diablo3] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo3] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo3] .Poll-resultsBar {
+  background: rgba(195, 65, 51, .05)
+}
+
+body[data-theme=diablo3] .Poll-resultsBarResult {
+  background-color: rgba(195, 65, 51, .5)
+}
+
+body[data-theme=diablo3] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo3] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo3] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=diablo3] .Poll-optionsCheckmark:after {
+  background-color: rgba(195, 65, 51, .5)
+}
+
+body[data-theme=diablo3] .Poll-actions {
+  background-color: rgba(195, 65, 51, .15)
+}
+
+body[data-theme=diablo3] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo3] .Poll.is-loading,
+body[data-theme=diablo3] .Poll.loading {
+  background-color: rgba(195, 65, 51, .05)
+}
+
+body[data-theme=diablo4] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=diablo4] .Poll-interior {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo4] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=diablo4] .Poll-subtitle--endsIn,
+body[data-theme=diablo4] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo4] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo4] .Poll-resultsBar {
+  background: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo4] .Poll-resultsBarResult {
+  background-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo4] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo4] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo4] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=diablo4] .Poll-optionsCheckmark:after {
+  background-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo4] .Poll-actions {
+  background-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=diablo4] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo4] .Poll.is-loading,
+body[data-theme=diablo4] .Poll.loading {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo-immortal] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=diablo-immortal] .Poll-interior {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo-immortal] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=diablo-immortal] .Poll-subtitle--endsIn,
+body[data-theme=diablo-immortal] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo-immortal] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo-immortal] .Poll-resultsBar {
+  background: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo-immortal] .Poll-resultsBarResult {
+  background-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo-immortal] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo-immortal] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo-immortal] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=diablo-immortal] .Poll-optionsCheckmark:after {
+  background-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo-immortal] .Poll-actions {
+  background-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=diablo-immortal] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=diablo-immortal] .Poll.is-loading,
+body[data-theme=diablo-immortal] .Poll.loading {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-interior {
+  background-color: rgba(116, 42, 255, .05)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-subtitle--endsIn,
+body[data-theme=heroes-of-the-storm] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-resultsBar {
+  background: rgba(116, 42, 255, .05)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-resultsBarResult {
+  background-color: rgba(116, 42, 255, .5)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-optionsCheckmark:after {
+  background-color: rgba(116, 42, 255, .5)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-actions {
+  background-color: rgba(116, 42, 255, .15)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=heroes-of-the-storm] .Poll.is-loading,
+body[data-theme=heroes-of-the-storm] .Poll.loading {
+  background-color: rgba(116, 42, 255, .05)
+}
+
+body[data-theme=hearthstone] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=hearthstone] .Poll-interior {
+  background-color: rgba(209, 121, 79, .05)
+}
+
+body[data-theme=hearthstone] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=hearthstone] .Poll-subtitle--endsIn,
+body[data-theme=hearthstone] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=hearthstone] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=hearthstone] .Poll-resultsBar {
+  background: rgba(209, 121, 79, .05)
+}
+
+body[data-theme=hearthstone] .Poll-resultsBarResult {
+  background-color: rgba(209, 121, 79, .5)
+}
+
+body[data-theme=hearthstone] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=hearthstone] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=hearthstone] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=hearthstone] .Poll-optionsCheckmark:after {
+  background-color: rgba(209, 121, 79, .5)
+}
+
+body[data-theme=hearthstone] .Poll-actions {
+  background-color: rgba(209, 121, 79, .15)
+}
+
+body[data-theme=hearthstone] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=hearthstone] .Poll.is-loading,
+body[data-theme=hearthstone] .Poll.loading {
+  background-color: rgba(209, 121, 79, .05)
+}
+
+body[data-theme=overwatch] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=overwatch] .Poll-interior {
+  background-color: hsla(240, 6%, 55%, .05)
+}
+
+body[data-theme=overwatch] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=overwatch] .Poll-subtitle--endsIn,
+body[data-theme=overwatch] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=overwatch] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=overwatch] .Poll-resultsBar {
+  background: hsla(240, 6%, 55%, .05)
+}
+
+body[data-theme=overwatch] .Poll-resultsBarResult {
+  background-color: hsla(240, 6%, 55%, .5)
+}
+
+body[data-theme=overwatch] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=overwatch] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=overwatch] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=overwatch] .Poll-optionsCheckmark:after {
+  background-color: hsla(240, 6%, 55%, .5)
+}
+
+body[data-theme=overwatch] .Poll-actions {
+  background-color: hsla(240, 6%, 55%, .15)
+}
+
+body[data-theme=overwatch] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=overwatch] .Poll.is-loading,
+body[data-theme=overwatch] .Poll.loading {
+  background-color: hsla(240, 6%, 55%, .05)
+}
+
+body[data-theme=starcraft] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=starcraft] .Poll-interior {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=starcraft] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=starcraft] .Poll-subtitle--endsIn,
+body[data-theme=starcraft] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=starcraft] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=starcraft] .Poll-resultsBar {
+  background: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=starcraft] .Poll-resultsBarResult {
+  background-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=starcraft] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=starcraft] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=starcraft] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=starcraft] .Poll-optionsCheckmark:after {
+  background-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=starcraft] .Poll-actions {
+  background-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=starcraft] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=starcraft] .Poll.is-loading,
+body[data-theme=starcraft] .Poll.loading {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=starcraft2] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=starcraft2] .Poll-interior {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=starcraft2] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=starcraft2] .Poll-subtitle--endsIn,
+body[data-theme=starcraft2] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=starcraft2] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=starcraft2] .Poll-resultsBar {
+  background: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=starcraft2] .Poll-resultsBarResult {
+  background-color: rgba(65, 125, 255, .5)
+}
+
+body[data-theme=starcraft2] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=starcraft2] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=starcraft2] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=starcraft2] .Poll-optionsCheckmark:after {
+  background-color: rgba(65, 125, 255, .5)
+}
+
+body[data-theme=starcraft2] .Poll-actions {
+  background-color: rgba(65, 125, 255, .15)
+}
+
+body[data-theme=starcraft2] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=starcraft2] .Poll.is-loading,
+body[data-theme=starcraft2] .Poll.loading {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=world-of-warcraft] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=world-of-warcraft] .Poll-interior {
+  background-color: rgba(190, 97, 19, .05)
+}
+
+body[data-theme=world-of-warcraft] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=world-of-warcraft] .Poll-subtitle--endsIn,
+body[data-theme=world-of-warcraft] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=world-of-warcraft] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=world-of-warcraft] .Poll-resultsBar {
+  background: rgba(190, 97, 19, .05)
+}
+
+body[data-theme=world-of-warcraft] .Poll-resultsBarResult {
+  background-color: rgba(190, 97, 19, .5)
+}
+
+body[data-theme=world-of-warcraft] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=world-of-warcraft] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=world-of-warcraft] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=world-of-warcraft] .Poll-optionsCheckmark:after {
+  background-color: rgba(190, 97, 19, .5)
+}
+
+body[data-theme=world-of-warcraft] .Poll-actions {
+  background-color: rgba(190, 97, 19, .15)
+}
+
+body[data-theme=world-of-warcraft] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=world-of-warcraft] .Poll.is-loading,
+body[data-theme=world-of-warcraft] .Poll.loading {
+  background-color: rgba(190, 97, 19, .05)
+}
+
+body[data-theme=warcraft3] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=warcraft3] .Poll-interior {
+  background-color: hsla(0, 0%, 70%, .05)
+}
+
+body[data-theme=warcraft3] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=warcraft3] .Poll-subtitle--endsIn,
+body[data-theme=warcraft3] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=warcraft3] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=warcraft3] .Poll-resultsBar {
+  background: hsla(0, 0%, 70%, .05)
+}
+
+body[data-theme=warcraft3] .Poll-resultsBarResult {
+  background-color: hsla(0, 0%, 70%, .5)
+}
+
+body[data-theme=warcraft3] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=warcraft3] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=warcraft3] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=warcraft3] .Poll-optionsCheckmark:after {
+  background-color: hsla(0, 0%, 70%, .5)
+}
+
+body[data-theme=warcraft3] .Poll-actions {
+  background-color: hsla(0, 0%, 70%, .15)
+}
+
+body[data-theme=warcraft3] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=warcraft3] .Poll.is-loading,
+body[data-theme=warcraft3] .Poll.loading {
+  background-color: hsla(0, 0%, 70%, .05)
+}
+
+body[data-theme=blizzcon] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=blizzcon] .Poll-interior {
+  background-color: rgba(14, 181, 255, .05)
+}
+
+body[data-theme=blizzcon] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=blizzcon] .Poll-subtitle--endsIn,
+body[data-theme=blizzcon] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=blizzcon] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=blizzcon] .Poll-resultsBar {
+  background: rgba(14, 181, 255, .05)
+}
+
+body[data-theme=blizzcon] .Poll-resultsBarResult {
+  background-color: rgba(14, 181, 255, .5)
+}
+
+body[data-theme=blizzcon] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=blizzcon] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=blizzcon] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=blizzcon] .Poll-optionsCheckmark:after {
+  background-color: rgba(14, 181, 255, .5)
+}
+
+body[data-theme=blizzcon] .Poll-actions {
+  background-color: rgba(14, 181, 255, .15)
+}
+
+body[data-theme=blizzcon] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=blizzcon] .Poll.is-loading,
+body[data-theme=blizzcon] .Poll.loading {
+  background-color: rgba(14, 181, 255, .05)
+}
+
+body[data-theme=battlenet] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=battlenet] .Poll-interior {
+  background-color: rgba(90, 93, 112, .05)
+}
+
+body[data-theme=battlenet] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=battlenet] .Poll-subtitle--endsIn,
+body[data-theme=battlenet] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=battlenet] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=battlenet] .Poll-resultsBar {
+  background: rgba(90, 93, 112, .05)
+}
+
+body[data-theme=battlenet] .Poll-resultsBarResult {
+  background-color: rgba(90, 93, 112, .5)
+}
+
+body[data-theme=battlenet] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=battlenet] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=battlenet] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=battlenet] .Poll-optionsCheckmark:after {
+  background-color: rgba(90, 93, 112, .5)
+}
+
+body[data-theme=battlenet] .Poll-actions {
+  background-color: rgba(90, 93, 112, .15)
+}
+
+body[data-theme=battlenet] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=battlenet] .Poll.is-loading,
+body[data-theme=battlenet] .Poll.loading {
+  background-color: rgba(90, 93, 112, .05)
+}
+
+body[data-theme=warcraftrumble] .Poll {
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=warcraftrumble] .Poll-interior {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=warcraftrumble] .Poll-title {
+  color: #fff
+}
+
+body[data-theme=warcraftrumble] .Poll-subtitle--endsIn,
+body[data-theme=warcraftrumble] .Poll-subtitle--endsOn {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=warcraftrumble] .Poll-resultsLabel {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=warcraftrumble] .Poll-resultsBar {
+  background: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=warcraftrumble] .Poll-resultsBarResult {
+  background-color: rgba(65, 125, 255, .5)
+}
+
+body[data-theme=warcraftrumble] .Poll-resultsPercentage {
+  color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=warcraftrumble] .Poll-optionsText {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=warcraftrumble] .Poll-optionsCheckmark {
+  border-color: hsla(0, 0%, 100%, .8);
+  background-color: transparent
+}
+
+body[data-theme=warcraftrumble] .Poll-optionsCheckmark:after {
+  background-color: rgba(65, 125, 255, .5)
+}
+
+body[data-theme=warcraftrumble] .Poll-actions {
+  background-color: rgba(65, 125, 255, .15)
+}
+
+body[data-theme=warcraftrumble] .Poll-actionsUserVoted {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-theme=warcraftrumble] .Poll.is-loading,
+body[data-theme=warcraftrumble] .Poll.loading {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+.Poll-subtitle--endsIn,
+.Poll-subtitle--endsOn {
+  text-transform: uppercase
+}
+
+.Poll-optionsRadio[type=checkbox]~.Poll-optionsCheckmark:after {
+  -webkit-mask: url(images/check-c1a3dbcc5a06956316ee375b6d4e5fe79124e0e7574b822bb9700b394ad5ec3048fcf94253deb64b286c9ed34814c4ff4c364fdace63702e5efac16f71033449.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  top: -1px;
+  left: -1px
+}
+
+.Poll-actions {
+  border-top: 1px solid;
+  border-color: hsla(0, 0%, 100%, .15)
+}
+
+.Poll.is-loading,
+.Poll.loading {
+  position: relative;
+  min-height: 320px;
+  background-color: rgba(0, 174, 255, .05)
+}
+
+.Poll.is-loading:after,
+.Poll.loading:after {
+  position: absolute;
+  content: " ";
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, .3)
+}
+
+.GalleryItem,
+a.FeaturedArticle-link {
+  -webkit-tap-highlight-color: transparent
+}
+
+.Card.Card--transparent {
+  background-color: hsla(0, 0%, 100%, .15)
+}
+
+.Card[data-device=desktop] .Card.Card--transparent:hover {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+.Card[data-device=desktop] .Card:hover .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body,
+body[data-theme=blizzard],
+body[data-theme=default] {
+  background-color: #012650
+}
+
+body[data-theme=blizzard] a,
+body[data-theme=default] a {
+  -webkit-tap-highlight-color: rgba(0, 174, 255, .3)
+}
+
+body[data-theme=blizzard] .ArticleLink,
+body[data-theme=default] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+
+  body[data-theme=blizzard] .Navbar.is-auto,
+  body[data-theme=default] .Navbar.is-auto {
+    background-color: rgba(0, 174, 255, .05)
+  }
+}
+
+body[data-theme=blizzard] .Navigation,
+body[data-theme=default] .Navigation {
+  background-color: rgba(0, 174, 255, .05)
+}
+
+body[data-theme=blizzard] .Card.Card--transparent,
+body[data-theme=default] .Card.Card--transparent {
+  background-color: rgba(0, 174, 255, .15)
+}
+
+body[data-theme=blizzard] .Card-imageWrapper:after,
+body[data-theme=default] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(0, 174, 255, .3), rgba(0, 174, 255, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=blizzard][data-device=mobile] .Card:active .Card-imageWrapper:after,
+body[data-theme=default][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=blizzard][data-device=mobile] .Card.Card--transparent:active,
+body[data-theme=default][data-device=mobile] .Card.Card--transparent:active {
+  background-color: rgba(0, 174, 255, .3)
+}
+
+body[data-theme=blizzard][data-device=mobile] .Card.Card--innerBorder:active:after,
+body[data-theme=default][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: rgba(0, 174, 255, .5)
+}
+
+body[data-theme=blizzard][data-device=desktop] .Card.Card--transparent:hover,
+body[data-theme=default][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: rgba(0, 174, 255, .3)
+}
+
+body[data-theme=blizzard][data-device=desktop] .Card.Card--innerBorder:hover:after,
+body[data-theme=default][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: rgba(0, 174, 255, .5)
+}
+
+body[data-theme=blizzard] .ResponsiveBlogs blockquote,
+body[data-theme=default] .ResponsiveBlogs blockquote {
+  border-left-color: #00aeff
+}
+
+body[data-theme=blizzard] .ResponsiveBlogs .pullquote,
+body[data-theme=blizzard] .ResponsiveBlogs blockquote,
+body[data-theme=default] .ResponsiveBlogs .pullquote,
+body[data-theme=default] .ResponsiveBlogs blockquote {
+  background-color: rgba(0, 174, 255, .05)
+}
+
+body[data-theme=blizzard] .ResponsiveBlogs .list-custom li:before,
+body[data-theme=default] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-757b847021f0dae2a1605fcc5cfb80d27e4ef9c15250c5e83ce80581c83424bb7f6d3fc16002f7fe61f21d749e5cfe1644b4551c4a35f48e958d1ddbe540b8e4.svg)
+}
+
+body[data-theme=blizzard] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=blizzard] .ResponsiveBlogs figure figcaption,
+body[data-theme=default] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=default] .ResponsiveBlogs figure figcaption {
+  background-color: rgba(0, 174, 255, .05)
+}
+
+body[data-theme=blizzard] .ResponsiveBlogs .blog_card,
+body[data-theme=default] .ResponsiveBlogs .blog_card {
+  background-color: rgba(0, 174, 255, .1)
+}
+
+body[data-theme=blizzard] .ResponsiveBlogs .nav-tabs,
+body[data-theme=default] .ResponsiveBlogs .nav-tabs {
+  border-color: rgba(0, 174, 255, .1)
+}
+
+body[data-theme=blizzard] .ResponsiveBlogs .nav-tabs>li,
+body[data-theme=default] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: rgba(0, 174, 255, .3)
+}
+
+body[data-theme=blizzard] .ResponsiveBlogs .tab-content,
+body[data-theme=default] .ResponsiveBlogs .tab-content {
+  border-color: rgba(0, 174, 255, .1);
+  background-color: rgba(0, 174, 255, .05)
+}
+
+body[data-theme=blizzard] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a,
+body[data-theme=default] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #00aeff;
+  border-bottom-color: rgba(0, 174, 255, .05)
+}
+
+body[data-theme=blizzard] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in,
+body[data-theme=default] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: rgba(0, 174, 255, .1);
+  background-color: rgba(0, 174, 255, .05)
+}
+
+body[data-theme=blizzard] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img,
+body[data-theme=default] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #00aeff
+}
+
+body[data-theme=blizzard][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover,
+body[data-theme=default][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: rgba(0, 174, 255, .05)
+}
+
+body[data-theme=blizzard][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover,
+body[data-theme=default][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: rgba(0, 174, 255, .1)
+}
+
+body[data-theme=blizzard][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=blizzard][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover,
+body[data-theme=default][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=default][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: rgba(0, 174, 255, .05);
+  border-bottom-color: #00aeff
+}
+
+body[data-theme=blizzard][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover,
+body[data-theme=default][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: rgba(0, 174, 255, .05)
+}
+
+body[data-theme=blizzard] .ArticleSidebarItem,
+body[data-theme=default] .ArticleSidebarItem {
+  background-color: rgba(0, 174, 255, .1)
+}
+
+body[data-theme=blizzard] .ArticleSidebarItem.is-focused,
+body[data-theme=default] .ArticleSidebarItem.is-focused {
+  background-color: rgba(0, 174, 255, .3)
+}
+
+body[data-theme=blizzard][data-device=desktop] .ArticleListItem:hover,
+body[data-theme=default][data-device=desktop] .ArticleListItem:hover {
+  background-color: rgba(0, 174, 255, .05);
+  border-color: rgba(0, 174, 255, .5)
+}
+
+body[data-theme=blizzard][data-device=desktop] .ArticleSidebarItem:hover,
+body[data-theme=default][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: rgba(0, 174, 255, .3)
+}
+
+body[data-theme=diablo3] {
+  background-color: #2a0e0b
+}
+
+body[data-theme=diablo3] a {
+  -webkit-tap-highlight-color: rgba(195, 65, 51, .3)
+}
+
+body[data-theme=diablo3] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=diablo3] .Navbar.is-auto {
+    background-color: rgba(195, 65, 51, .05)
+  }
+}
+
+body[data-theme=diablo3] .Navigation {
+  background-color: rgba(195, 65, 51, .05)
+}
+
+body[data-theme=diablo3] .Card.Card--transparent {
+  background-color: rgba(195, 65, 51, .15)
+}
+
+body[data-theme=diablo3] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(195, 65, 51, .3), rgba(195, 65, 51, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=diablo3][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=diablo3][data-device=mobile] .Card.Card--transparent:active {
+  background-color: rgba(195, 65, 51, .3)
+}
+
+body[data-theme=diablo3][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: rgba(195, 65, 51, .5)
+}
+
+body[data-theme=diablo3][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: rgba(195, 65, 51, .3)
+}
+
+body[data-theme=diablo3][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: rgba(195, 65, 51, .5)
+}
+
+body[data-theme=diablo3] .ResponsiveBlogs blockquote {
+  border-left-color: #c34133
+}
+
+body[data-theme=diablo3] .ResponsiveBlogs .pullquote,
+body[data-theme=diablo3] .ResponsiveBlogs blockquote {
+  background-color: rgba(195, 65, 51, .05)
+}
+
+body[data-theme=diablo3] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-diablo-2b143dae7216e418b8860c179f12eac749d74feee352723d7c34c4d4cde1c8141b790486e909b9ad9210f995adb76c4a8412a104d52ec3250dc61b2d8c36ce14.svg)
+}
+
+body[data-theme=diablo3] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=diablo3] .ResponsiveBlogs figure figcaption {
+  background-color: rgba(195, 65, 51, .05)
+}
+
+body[data-theme=diablo3] .ResponsiveBlogs .blog_card {
+  background-color: rgba(195, 65, 51, .1)
+}
+
+body[data-theme=diablo3] .ResponsiveBlogs .nav-tabs {
+  border-color: rgba(195, 65, 51, .1)
+}
+
+body[data-theme=diablo3] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: rgba(195, 65, 51, .3)
+}
+
+body[data-theme=diablo3] .ResponsiveBlogs .tab-content {
+  border-color: rgba(195, 65, 51, .1);
+  background-color: rgba(195, 65, 51, .05)
+}
+
+body[data-theme=diablo3] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #c34133;
+  border-bottom-color: rgba(195, 65, 51, .05)
+}
+
+body[data-theme=diablo3] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: rgba(195, 65, 51, .1);
+  background-color: rgba(195, 65, 51, .05)
+}
+
+body[data-theme=diablo3] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #c34133
+}
+
+body[data-theme=diablo3][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: rgba(195, 65, 51, .05)
+}
+
+body[data-theme=diablo3][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: rgba(195, 65, 51, .1)
+}
+
+body[data-theme=diablo3][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=diablo3][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: rgba(195, 65, 51, .05);
+  border-bottom-color: #c34133
+}
+
+body[data-theme=diablo3][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: rgba(195, 65, 51, .05)
+}
+
+body[data-theme=diablo3] .ArticleSidebarItem {
+  background-color: rgba(195, 65, 51, .1)
+}
+
+body[data-theme=diablo3] .ArticleSidebarItem.is-focused {
+  background-color: rgba(195, 65, 51, .3)
+}
+
+body[data-theme=diablo3][data-device=desktop] .ArticleListItem:hover {
+  background-color: rgba(195, 65, 51, .05);
+  border-color: rgba(195, 65, 51, .5)
+}
+
+body[data-theme=diablo3][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: rgba(195, 65, 51, .3)
+}
+
+body[data-theme=diablo2] {
+  background-color: #2e1110
+}
+
+body[data-theme=diablo2] a {
+  -webkit-tap-highlight-color: rgba(181, 56, 26, .3)
+}
+
+body[data-theme=diablo2] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=diablo2] .Navbar.is-auto {
+    background-color: rgba(181, 56, 26, .05)
+  }
+}
+
+body[data-theme=diablo2] .Navigation {
+  background-color: rgba(181, 56, 26, .05)
+}
+
+body[data-theme=diablo2] .Card.Card--transparent {
+  background-color: rgba(181, 56, 26, .15)
+}
+
+body[data-theme=diablo2] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(181, 56, 26, .3), rgba(181, 56, 26, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=diablo2][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=diablo2][data-device=mobile] .Card.Card--transparent:active {
+  background-color: rgba(181, 56, 26, .3)
+}
+
+body[data-theme=diablo2][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: rgba(181, 56, 26, .5)
+}
+
+body[data-theme=diablo2][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: rgba(181, 56, 26, .3)
+}
+
+body[data-theme=diablo2][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: rgba(181, 56, 26, .5)
+}
+
+body[data-theme=diablo2] .ResponsiveBlogs blockquote {
+  border-left-color: #b5381a
+}
+
+body[data-theme=diablo2] .ResponsiveBlogs .pullquote,
+body[data-theme=diablo2] .ResponsiveBlogs blockquote {
+  background-color: rgba(181, 56, 26, .05)
+}
+
+body[data-theme=diablo2] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-diablo-2b143dae7216e418b8860c179f12eac749d74feee352723d7c34c4d4cde1c8141b790486e909b9ad9210f995adb76c4a8412a104d52ec3250dc61b2d8c36ce14.svg)
+}
+
+body[data-theme=diablo2] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=diablo2] .ResponsiveBlogs figure figcaption {
+  background-color: rgba(181, 56, 26, .05)
+}
+
+body[data-theme=diablo2] .ResponsiveBlogs .blog_card {
+  background-color: rgba(181, 56, 26, .1)
+}
+
+body[data-theme=diablo2] .ResponsiveBlogs .nav-tabs {
+  border-color: rgba(181, 56, 26, .1)
+}
+
+body[data-theme=diablo2] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: rgba(181, 56, 26, .3)
+}
+
+body[data-theme=diablo2] .ResponsiveBlogs .tab-content {
+  border-color: rgba(181, 56, 26, .1);
+  background-color: rgba(181, 56, 26, .05)
+}
+
+body[data-theme=diablo2] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #b5381a;
+  border-bottom-color: rgba(181, 56, 26, .05)
+}
+
+body[data-theme=diablo2] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: rgba(181, 56, 26, .1);
+  background-color: rgba(181, 56, 26, .05)
+}
+
+body[data-theme=diablo2] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #b5381a
+}
+
+body[data-theme=diablo2][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: rgba(181, 56, 26, .05)
+}
+
+body[data-theme=diablo2][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: rgba(181, 56, 26, .1)
+}
+
+body[data-theme=diablo2][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=diablo2][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: rgba(181, 56, 26, .05);
+  border-bottom-color: #b5381a
+}
+
+body[data-theme=diablo2][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: rgba(181, 56, 26, .05)
+}
+
+body[data-theme=diablo2] .ArticleSidebarItem {
+  background-color: rgba(181, 56, 26, .1)
+}
+
+body[data-theme=diablo2] .ArticleSidebarItem.is-focused {
+  background-color: rgba(181, 56, 26, .3)
+}
+
+body[data-theme=diablo2][data-device=desktop] .ArticleListItem:hover {
+  background-color: rgba(181, 56, 26, .05);
+  border-color: rgba(181, 56, 26, .5)
+}
+
+body[data-theme=diablo2][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: rgba(181, 56, 26, .3)
+}
+
+body[data-theme=diablo4] {
+  background-color: #1b1915
+}
+
+body[data-theme=diablo4] a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, .3)
+}
+
+body[data-theme=diablo4] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=diablo4] .Navbar.is-auto {
+    background-color: hsla(0, 0%, 100%, .05)
+  }
+}
+
+body[data-theme=diablo4] .Navigation {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo4] .Card.Card--transparent {
+  background-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=diablo4] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, hsla(0, 0%, 100%, .3), hsla(0, 0%, 100%, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=diablo4][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=diablo4][data-device=mobile] .Card.Card--transparent:active {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=diablo4][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo4][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=diablo4][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo4] .ResponsiveBlogs blockquote {
+  border-left-color: #fff
+}
+
+body[data-theme=diablo4] .ResponsiveBlogs .pullquote,
+body[data-theme=diablo4] .ResponsiveBlogs blockquote {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo4] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-default-5563e9c23411ecde4f7fea1cbd907caffe0e07f7cb80c5d968bb454524fdc807adb325027d26846768fdabbd02839bdc1aacf116916f117ff1d4f0691d38363f.svg)
+}
+
+body[data-theme=diablo4] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=diablo4] .ResponsiveBlogs figure figcaption {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo4] .ResponsiveBlogs .blog_card {
+  background-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=diablo4] .ResponsiveBlogs .nav-tabs {
+  border-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=diablo4] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=diablo4] .ResponsiveBlogs .tab-content {
+  border-color: hsla(0, 0%, 100%, .1);
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo4] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #fff;
+  border-bottom-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo4] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: hsla(0, 0%, 100%, .1);
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo4] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #fff
+}
+
+body[data-theme=diablo4][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo4][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=diablo4][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=diablo4][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: hsla(0, 0%, 100%, .05);
+  border-bottom-color: #fff
+}
+
+body[data-theme=diablo4][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo4] .ArticleSidebarItem {
+  background-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=diablo4] .ArticleSidebarItem.is-focused {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=diablo4][data-device=desktop] .ArticleListItem:hover {
+  background-color: hsla(0, 0%, 100%, .05);
+  border-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo4][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=diablo-immortal] {
+  background-color: #220b0d
+}
+
+body[data-theme=diablo-immortal] a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, .3)
+}
+
+body[data-theme=diablo-immortal] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=diablo-immortal] .Navbar.is-auto {
+    background-color: hsla(0, 0%, 100%, .05)
+  }
+}
+
+body[data-theme=diablo-immortal] .Navigation {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo-immortal] .Card.Card--transparent {
+  background-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=diablo-immortal] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, hsla(0, 0%, 100%, .3), hsla(0, 0%, 100%, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=diablo-immortal][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=diablo-immortal][data-device=mobile] .Card.Card--transparent:active {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=diablo-immortal][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo-immortal][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=diablo-immortal][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo-immortal] .ResponsiveBlogs blockquote {
+  border-left-color: #fff
+}
+
+body[data-theme=diablo-immortal] .ResponsiveBlogs .pullquote,
+body[data-theme=diablo-immortal] .ResponsiveBlogs blockquote {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo-immortal] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-default-5563e9c23411ecde4f7fea1cbd907caffe0e07f7cb80c5d968bb454524fdc807adb325027d26846768fdabbd02839bdc1aacf116916f117ff1d4f0691d38363f.svg)
+}
+
+body[data-theme=diablo-immortal] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=diablo-immortal] .ResponsiveBlogs figure figcaption {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo-immortal] .ResponsiveBlogs .blog_card {
+  background-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=diablo-immortal] .ResponsiveBlogs .nav-tabs {
+  border-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=diablo-immortal] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=diablo-immortal] .ResponsiveBlogs .tab-content {
+  border-color: hsla(0, 0%, 100%, .1);
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo-immortal] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #fff;
+  border-bottom-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo-immortal] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: hsla(0, 0%, 100%, .1);
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo-immortal] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #fff
+}
+
+body[data-theme=diablo-immortal][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo-immortal][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=diablo-immortal][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=diablo-immortal][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: hsla(0, 0%, 100%, .05);
+  border-bottom-color: #fff
+}
+
+body[data-theme=diablo-immortal][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=diablo-immortal] .ArticleSidebarItem {
+  background-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=diablo-immortal] .ArticleSidebarItem.is-focused {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=diablo-immortal][data-device=desktop] .ArticleListItem:hover {
+  background-color: hsla(0, 0%, 100%, .05);
+  border-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=diablo-immortal][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=heroes-of-the-storm] {
+  background-color: #190938
+}
+
+body[data-theme=heroes-of-the-storm] a {
+  -webkit-tap-highlight-color: rgba(116, 42, 255, .3)
+}
+
+body[data-theme=heroes-of-the-storm] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=heroes-of-the-storm] .Navbar.is-auto {
+    background-color: rgba(116, 42, 255, .05)
+  }
+}
+
+body[data-theme=heroes-of-the-storm] .Navigation {
+  background-color: rgba(116, 42, 255, .05)
+}
+
+body[data-theme=heroes-of-the-storm] .Card.Card--transparent {
+  background-color: rgba(116, 42, 255, .15)
+}
+
+body[data-theme=heroes-of-the-storm] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(116, 42, 255, .3), rgba(116, 42, 255, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=heroes-of-the-storm][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=heroes-of-the-storm][data-device=mobile] .Card.Card--transparent:active {
+  background-color: rgba(116, 42, 255, .3)
+}
+
+body[data-theme=heroes-of-the-storm][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: rgba(116, 42, 255, .5)
+}
+
+body[data-theme=heroes-of-the-storm][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: rgba(116, 42, 255, .3)
+}
+
+body[data-theme=heroes-of-the-storm][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: rgba(116, 42, 255, .5)
+}
+
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs blockquote {
+  border-left-color: #742aff
+}
+
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs .pullquote,
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs blockquote {
+  background-color: rgba(116, 42, 255, .05)
+}
+
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-heroes-665bba55c4eddfbeb2241bc59be7a1516a88beb55e76953a8b06d0b6dca176ad3e27ee14d89635c1fe2792501a702d41c1d3ad13bee1c0efd040b7d709a34938.svg)
+}
+
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs figure figcaption {
+  background-color: rgba(116, 42, 255, .05)
+}
+
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs .blog_card {
+  background-color: rgba(116, 42, 255, .1)
+}
+
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs .nav-tabs {
+  border-color: rgba(116, 42, 255, .1)
+}
+
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: rgba(116, 42, 255, .3)
+}
+
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs .tab-content {
+  border-color: rgba(116, 42, 255, .1);
+  background-color: rgba(116, 42, 255, .05)
+}
+
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #742aff;
+  border-bottom-color: rgba(116, 42, 255, .05)
+}
+
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: rgba(116, 42, 255, .1);
+  background-color: rgba(116, 42, 255, .05)
+}
+
+body[data-theme=heroes-of-the-storm] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #742aff
+}
+
+body[data-theme=heroes-of-the-storm][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: rgba(116, 42, 255, .05)
+}
+
+body[data-theme=heroes-of-the-storm][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: rgba(116, 42, 255, .1)
+}
+
+body[data-theme=heroes-of-the-storm][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=heroes-of-the-storm][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: rgba(116, 42, 255, .05);
+  border-bottom-color: #742aff
+}
+
+body[data-theme=heroes-of-the-storm][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: rgba(116, 42, 255, .05)
+}
+
+body[data-theme=heroes-of-the-storm] .ArticleSidebarItem {
+  background-color: rgba(116, 42, 255, .1)
+}
+
+body[data-theme=heroes-of-the-storm] .ArticleSidebarItem.is-focused {
+  background-color: rgba(116, 42, 255, .3)
+}
+
+body[data-theme=heroes-of-the-storm][data-device=desktop] .ArticleListItem:hover {
+  background-color: rgba(116, 42, 255, .05);
+  border-color: rgba(116, 42, 255, .5)
+}
+
+body[data-theme=heroes-of-the-storm][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: rgba(116, 42, 255, .3)
+}
+
+body[data-theme=hearthstone] {
+  background-color: #2d1b11
+}
+
+body[data-theme=hearthstone] a {
+  -webkit-tap-highlight-color: rgba(209, 121, 79, .3)
+}
+
+body[data-theme=hearthstone] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=hearthstone] .Navbar.is-auto {
+    background-color: rgba(209, 121, 79, .05)
+  }
+}
+
+body[data-theme=hearthstone] .Navigation {
+  background-color: rgba(209, 121, 79, .05)
+}
+
+body[data-theme=hearthstone] .Card.Card--transparent {
+  background-color: rgba(209, 121, 79, .15)
+}
+
+body[data-theme=hearthstone] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(209, 121, 79, .3), rgba(209, 121, 79, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=hearthstone][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=hearthstone][data-device=mobile] .Card.Card--transparent:active {
+  background-color: rgba(209, 121, 79, .3)
+}
+
+body[data-theme=hearthstone][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: rgba(209, 121, 79, .5)
+}
+
+body[data-theme=hearthstone][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: rgba(209, 121, 79, .3)
+}
+
+body[data-theme=hearthstone][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: rgba(209, 121, 79, .5)
+}
+
+body[data-theme=hearthstone] .ResponsiveBlogs blockquote {
+  border-left-color: #d1794f
+}
+
+body[data-theme=hearthstone] .ResponsiveBlogs .pullquote,
+body[data-theme=hearthstone] .ResponsiveBlogs blockquote {
+  background-color: rgba(209, 121, 79, .05)
+}
+
+body[data-theme=hearthstone] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-hearthstone-6db7a609b259a3e1d74d066ee0574fe22fa72b64cc05ef30dafdac73d08c9adc55df5517d63305cb37baf033993c388186e0f6060e54f15c65853f5976c78ed2.svg)
+}
+
+body[data-theme=hearthstone] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=hearthstone] .ResponsiveBlogs figure figcaption {
+  background-color: rgba(209, 121, 79, .05)
+}
+
+body[data-theme=hearthstone] .ResponsiveBlogs .blog_card {
+  background-color: rgba(209, 121, 79, .1)
+}
+
+body[data-theme=hearthstone] .ResponsiveBlogs .nav-tabs {
+  border-color: rgba(209, 121, 79, .1)
+}
+
+body[data-theme=hearthstone] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: rgba(209, 121, 79, .3)
+}
+
+body[data-theme=hearthstone] .ResponsiveBlogs .tab-content {
+  border-color: rgba(209, 121, 79, .1);
+  background-color: rgba(209, 121, 79, .05)
+}
+
+body[data-theme=hearthstone] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #d1794f;
+  border-bottom-color: rgba(209, 121, 79, .05)
+}
+
+body[data-theme=hearthstone] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: rgba(209, 121, 79, .1);
+  background-color: rgba(209, 121, 79, .05)
+}
+
+body[data-theme=hearthstone] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #d1794f
+}
+
+body[data-theme=hearthstone][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: rgba(209, 121, 79, .05)
+}
+
+body[data-theme=hearthstone][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: rgba(209, 121, 79, .1)
+}
+
+body[data-theme=hearthstone][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=hearthstone][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: rgba(209, 121, 79, .05);
+  border-bottom-color: #d1794f
+}
+
+body[data-theme=hearthstone][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: rgba(209, 121, 79, .05)
+}
+
+body[data-theme=hearthstone] .ArticleSidebarItem {
+  background-color: rgba(209, 121, 79, .1)
+}
+
+body[data-theme=hearthstone] .ArticleSidebarItem.is-focused {
+  background-color: rgba(209, 121, 79, .3)
+}
+
+body[data-theme=hearthstone][data-device=desktop] .ArticleListItem:hover {
+  background-color: rgba(209, 121, 79, .05);
+  border-color: rgba(209, 121, 79, .5)
+}
+
+body[data-theme=hearthstone][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: rgba(209, 121, 79, .3)
+}
+
+body[data-theme=overwatch] {
+  background-color: #0f0f11
+}
+
+body[data-theme=overwatch] a {
+  -webkit-tap-highlight-color: rgba(132, 132, 147, .3)
+}
+
+body[data-theme=overwatch] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=overwatch] .Navbar.is-auto {
+    background-color: hsla(240, 6%, 55%, .05)
+  }
+}
+
+body[data-theme=overwatch] .Navigation {
+  background-color: hsla(240, 6%, 55%, .05)
+}
+
+body[data-theme=overwatch] .Card.Card--transparent {
+  background-color: hsla(240, 6%, 55%, .15)
+}
+
+body[data-theme=overwatch] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, hsla(240, 6%, 55%, .3), hsla(240, 6%, 55%, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=overwatch][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=overwatch][data-device=mobile] .Card.Card--transparent:active {
+  background-color: hsla(240, 6%, 55%, .3)
+}
+
+body[data-theme=overwatch][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: hsla(240, 6%, 55%, .5)
+}
+
+body[data-theme=overwatch][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: hsla(240, 6%, 55%, .3)
+}
+
+body[data-theme=overwatch][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: hsla(240, 6%, 55%, .5)
+}
+
+body[data-theme=overwatch] .ResponsiveBlogs blockquote {
+  border-left-color: #848493
+}
+
+body[data-theme=overwatch] .ResponsiveBlogs .pullquote,
+body[data-theme=overwatch] .ResponsiveBlogs blockquote {
+  background-color: hsla(240, 6%, 55%, .05)
+}
+
+body[data-theme=overwatch] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-overwatch-0187a412f5e2c6fbbdd2c90e246230ca0a0c6557469cf650f3488c6007afd3165900d88561389a7d79c692168a070699d26b4962b70057288807b13f0d8cf0a4.svg)
+}
+
+body[data-theme=overwatch] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=overwatch] .ResponsiveBlogs figure figcaption {
+  background-color: hsla(240, 6%, 55%, .05)
+}
+
+body[data-theme=overwatch] .ResponsiveBlogs .blog_card {
+  background-color: hsla(240, 6%, 55%, .1)
+}
+
+body[data-theme=overwatch] .ResponsiveBlogs .nav-tabs {
+  border-color: hsla(240, 6%, 55%, .1)
+}
+
+body[data-theme=overwatch] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: hsla(240, 6%, 55%, .3)
+}
+
+body[data-theme=overwatch] .ResponsiveBlogs .tab-content {
+  border-color: hsla(240, 6%, 55%, .1);
+  background-color: hsla(240, 6%, 55%, .05)
+}
+
+body[data-theme=overwatch] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #848493;
+  border-bottom-color: hsla(240, 6%, 55%, .05)
+}
+
+body[data-theme=overwatch] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: hsla(240, 6%, 55%, .1);
+  background-color: hsla(240, 6%, 55%, .05)
+}
+
+body[data-theme=overwatch] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #848493
+}
+
+body[data-theme=overwatch][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: hsla(240, 6%, 55%, .05)
+}
+
+body[data-theme=overwatch][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: hsla(240, 6%, 55%, .1)
+}
+
+body[data-theme=overwatch][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=overwatch][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: hsla(240, 6%, 55%, .05);
+  border-bottom-color: #848493
+}
+
+body[data-theme=overwatch][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: hsla(240, 6%, 55%, .05)
+}
+
+body[data-theme=overwatch] .ArticleSidebarItem {
+  background-color: hsla(240, 6%, 55%, .1)
+}
+
+body[data-theme=overwatch] .ArticleSidebarItem.is-focused {
+  background-color: hsla(240, 6%, 55%, .3)
+}
+
+body[data-theme=overwatch][data-device=desktop] .ArticleListItem:hover {
+  background-color: hsla(240, 6%, 55%, .05);
+  border-color: hsla(240, 6%, 55%, .5)
+}
+
+body[data-theme=overwatch][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: hsla(240, 6%, 55%, .3)
+}
+
+body[data-theme=starcraft] {
+  background-color: #040917
+}
+
+body[data-theme=starcraft] a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, .3)
+}
+
+body[data-theme=starcraft] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=starcraft] .Navbar.is-auto {
+    background-color: hsla(0, 0%, 100%, .05)
+  }
+}
+
+body[data-theme=starcraft] .Navigation {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=starcraft] .Card.Card--transparent {
+  background-color: hsla(0, 0%, 100%, .15)
+}
+
+body[data-theme=starcraft] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, hsla(0, 0%, 100%, .3), hsla(0, 0%, 100%, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=starcraft][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=starcraft][data-device=mobile] .Card.Card--transparent:active {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=starcraft][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=starcraft][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=starcraft][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=starcraft] .ResponsiveBlogs blockquote {
+  border-left-color: #fff
+}
+
+body[data-theme=starcraft] .ResponsiveBlogs .pullquote,
+body[data-theme=starcraft] .ResponsiveBlogs blockquote {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=starcraft] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-starcraft-80f72ff74605bcab47140ad0a1e27f5652f299cbf22820cb0d62afaff23c2c61aaf379d27b36486bf69bc0ef3cd55e66d3c85594d132ff9c917048e27bd6ffcd.svg)
+}
+
+body[data-theme=starcraft] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=starcraft] .ResponsiveBlogs figure figcaption {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=starcraft] .ResponsiveBlogs .blog_card {
+  background-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=starcraft] .ResponsiveBlogs .nav-tabs {
+  border-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=starcraft] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=starcraft] .ResponsiveBlogs .tab-content {
+  border-color: hsla(0, 0%, 100%, .1);
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=starcraft] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #fff;
+  border-bottom-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=starcraft] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: hsla(0, 0%, 100%, .1);
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=starcraft] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #fff
+}
+
+body[data-theme=starcraft][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=starcraft][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=starcraft][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=starcraft][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: hsla(0, 0%, 100%, .05);
+  border-bottom-color: #fff
+}
+
+body[data-theme=starcraft][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: hsla(0, 0%, 100%, .05)
+}
+
+body[data-theme=starcraft] .ArticleSidebarItem {
+  background-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-theme=starcraft] .ArticleSidebarItem.is-focused {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=starcraft][data-device=desktop] .ArticleListItem:hover {
+  background-color: hsla(0, 0%, 100%, .05);
+  border-color: hsla(0, 0%, 100%, .5)
+}
+
+body[data-theme=starcraft][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: hsla(0, 0%, 100%, .3)
+}
+
+body[data-theme=starcraft2] {
+  background-color: #0e1b3e
+}
+
+body[data-theme=starcraft2] a {
+  -webkit-tap-highlight-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=starcraft2] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=starcraft2] .Navbar.is-auto {
+    background-color: rgba(65, 125, 255, .05)
+  }
+}
+
+body[data-theme=starcraft2] .Navigation {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=starcraft2] .Card.Card--transparent {
+  background-color: rgba(65, 125, 255, .15)
+}
+
+body[data-theme=starcraft2] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(65, 125, 255, .3), rgba(65, 125, 255, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=starcraft2][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=starcraft2][data-device=mobile] .Card.Card--transparent:active {
+  background-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=starcraft2][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: rgba(65, 125, 255, .5)
+}
+
+body[data-theme=starcraft2][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=starcraft2][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: rgba(65, 125, 255, .5)
+}
+
+body[data-theme=starcraft2] .ResponsiveBlogs blockquote {
+  border-left-color: #417dff
+}
+
+body[data-theme=starcraft2] .ResponsiveBlogs .pullquote,
+body[data-theme=starcraft2] .ResponsiveBlogs blockquote {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=starcraft2] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-starcraft-80f72ff74605bcab47140ad0a1e27f5652f299cbf22820cb0d62afaff23c2c61aaf379d27b36486bf69bc0ef3cd55e66d3c85594d132ff9c917048e27bd6ffcd.svg)
+}
+
+body[data-theme=starcraft2] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=starcraft2] .ResponsiveBlogs figure figcaption {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=starcraft2] .ResponsiveBlogs .blog_card {
+  background-color: rgba(65, 125, 255, .1)
+}
+
+body[data-theme=starcraft2] .ResponsiveBlogs .nav-tabs {
+  border-color: rgba(65, 125, 255, .1)
+}
+
+body[data-theme=starcraft2] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=starcraft2] .ResponsiveBlogs .tab-content {
+  border-color: rgba(65, 125, 255, .1);
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=starcraft2] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #417dff;
+  border-bottom-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=starcraft2] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: rgba(65, 125, 255, .1);
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=starcraft2] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #417dff
+}
+
+body[data-theme=starcraft2][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=starcraft2][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: rgba(65, 125, 255, .1)
+}
+
+body[data-theme=starcraft2][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=starcraft2][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: rgba(65, 125, 255, .05);
+  border-bottom-color: #417dff
+}
+
+body[data-theme=starcraft2][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=starcraft2] .ArticleSidebarItem {
+  background-color: rgba(65, 125, 255, .1)
+}
+
+body[data-theme=starcraft2] .ArticleSidebarItem.is-focused {
+  background-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=starcraft2][data-device=desktop] .ArticleListItem:hover {
+  background-color: rgba(65, 125, 255, .05);
+  border-color: rgba(65, 125, 255, .5)
+}
+
+body[data-theme=starcraft2][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=world-of-warcraft] {
+  background-color: #281504
+}
+
+body[data-theme=world-of-warcraft] a {
+  -webkit-tap-highlight-color: rgba(190, 97, 19, .3)
+}
+
+body[data-theme=world-of-warcraft] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=world-of-warcraft] .Navbar.is-auto {
+    background-color: rgba(190, 97, 19, .05)
+  }
+}
+
+body[data-theme=world-of-warcraft] .Navigation {
+  background-color: rgba(190, 97, 19, .05)
+}
+
+body[data-theme=world-of-warcraft] .Card.Card--transparent {
+  background-color: rgba(190, 97, 19, .15)
+}
+
+body[data-theme=world-of-warcraft] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(190, 97, 19, .3), rgba(190, 97, 19, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=world-of-warcraft][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=world-of-warcraft][data-device=mobile] .Card.Card--transparent:active {
+  background-color: rgba(190, 97, 19, .3)
+}
+
+body[data-theme=world-of-warcraft][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: rgba(190, 97, 19, .5)
+}
+
+body[data-theme=world-of-warcraft][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: rgba(190, 97, 19, .3)
+}
+
+body[data-theme=world-of-warcraft][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: rgba(190, 97, 19, .5)
+}
+
+body[data-theme=world-of-warcraft] .ResponsiveBlogs blockquote {
+  border-left-color: #be6113
+}
+
+body[data-theme=world-of-warcraft] .ResponsiveBlogs .pullquote,
+body[data-theme=world-of-warcraft] .ResponsiveBlogs blockquote {
+  background-color: rgba(190, 97, 19, .05)
+}
+
+body[data-theme=world-of-warcraft] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-warcraft-a4cf9406785064d6177c75b6f89cfedf72f133886e6ef6fb3f3bcdc54c62f0a33d77b208a4d13e5fecf2f268adeec0f427194b8447f922f8c63690a30932b0cd.svg)
+}
+
+body[data-theme=world-of-warcraft] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=world-of-warcraft] .ResponsiveBlogs figure figcaption {
+  background-color: rgba(190, 97, 19, .05)
+}
+
+body[data-theme=world-of-warcraft] .ResponsiveBlogs .blog_card {
+  background-color: rgba(190, 97, 19, .1)
+}
+
+body[data-theme=world-of-warcraft] .ResponsiveBlogs .nav-tabs {
+  border-color: rgba(190, 97, 19, .1)
+}
+
+body[data-theme=world-of-warcraft] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: rgba(190, 97, 19, .3)
+}
+
+body[data-theme=world-of-warcraft] .ResponsiveBlogs .tab-content {
+  border-color: rgba(190, 97, 19, .1);
+  background-color: rgba(190, 97, 19, .05)
+}
+
+body[data-theme=world-of-warcraft] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #be6113;
+  border-bottom-color: rgba(190, 97, 19, .05)
+}
+
+body[data-theme=world-of-warcraft] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: rgba(190, 97, 19, .1);
+  background-color: rgba(190, 97, 19, .05)
+}
+
+body[data-theme=world-of-warcraft] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #be6113
+}
+
+body[data-theme=world-of-warcraft][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: rgba(190, 97, 19, .05)
+}
+
+body[data-theme=world-of-warcraft][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: rgba(190, 97, 19, .1)
+}
+
+body[data-theme=world-of-warcraft][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=world-of-warcraft][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: rgba(190, 97, 19, .05);
+  border-bottom-color: #be6113
+}
+
+body[data-theme=world-of-warcraft][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: rgba(190, 97, 19, .05)
+}
+
+body[data-theme=world-of-warcraft] .ArticleSidebarItem {
+  background-color: rgba(190, 97, 19, .1)
+}
+
+body[data-theme=world-of-warcraft] .ArticleSidebarItem.is-focused {
+  background-color: rgba(190, 97, 19, .3)
+}
+
+body[data-theme=world-of-warcraft][data-device=desktop] .ArticleListItem:hover {
+  background-color: rgba(190, 97, 19, .05);
+  border-color: rgba(190, 97, 19, .5)
+}
+
+body[data-theme=world-of-warcraft][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: rgba(190, 97, 19, .3)
+}
+
+body[data-theme=blizzcon] {
+  background-color: #032749
+}
+
+body[data-theme=blizzcon] a {
+  -webkit-tap-highlight-color: rgba(14, 181, 255, .3)
+}
+
+body[data-theme=blizzcon] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=blizzcon] .Navbar.is-auto {
+    background-color: rgba(14, 181, 255, .05)
+  }
+}
+
+body[data-theme=blizzcon] .Navigation {
+  background-color: rgba(14, 181, 255, .05)
+}
+
+body[data-theme=blizzcon] .Card.Card--transparent {
+  background-color: rgba(14, 181, 255, .15)
+}
+
+body[data-theme=blizzcon] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(14, 181, 255, .3), rgba(14, 181, 255, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=blizzcon][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=blizzcon][data-device=mobile] .Card.Card--transparent:active {
+  background-color: rgba(14, 181, 255, .3)
+}
+
+body[data-theme=blizzcon][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: rgba(14, 181, 255, .5)
+}
+
+body[data-theme=blizzcon][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: rgba(14, 181, 255, .3)
+}
+
+body[data-theme=blizzcon][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: rgba(14, 181, 255, .5)
+}
+
+body[data-theme=blizzcon] .ResponsiveBlogs blockquote {
+  border-left-color: #0eb5ff
+}
+
+body[data-theme=blizzcon] .ResponsiveBlogs .pullquote,
+body[data-theme=blizzcon] .ResponsiveBlogs blockquote {
+  background-color: rgba(14, 181, 255, .05)
+}
+
+body[data-theme=blizzcon] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-blizzcon-b5da906b8d7d1e8ce4e478d9cefa7e5ae9cbba513e24281a2b62965498f7e6a0ea9f6766e07921011e36b0cbb70e5bffaa3f2295050b8a168370d05959dcb136.svg)
+}
+
+body[data-theme=blizzcon] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=blizzcon] .ResponsiveBlogs figure figcaption {
+  background-color: rgba(14, 181, 255, .05)
+}
+
+body[data-theme=blizzcon] .ResponsiveBlogs .blog_card {
+  background-color: rgba(14, 181, 255, .1)
+}
+
+body[data-theme=blizzcon] .ResponsiveBlogs .nav-tabs {
+  border-color: rgba(14, 181, 255, .1)
+}
+
+body[data-theme=blizzcon] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: rgba(14, 181, 255, .3)
+}
+
+body[data-theme=blizzcon] .ResponsiveBlogs .tab-content {
+  border-color: rgba(14, 181, 255, .1);
+  background-color: rgba(14, 181, 255, .05)
+}
+
+body[data-theme=blizzcon] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #0eb5ff;
+  border-bottom-color: rgba(14, 181, 255, .05)
+}
+
+body[data-theme=blizzcon] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: rgba(14, 181, 255, .1);
+  background-color: rgba(14, 181, 255, .05)
+}
+
+body[data-theme=blizzcon] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #0eb5ff
+}
+
+body[data-theme=blizzcon][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: rgba(14, 181, 255, .05)
+}
+
+body[data-theme=blizzcon][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: rgba(14, 181, 255, .1)
+}
+
+body[data-theme=blizzcon][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=blizzcon][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: rgba(14, 181, 255, .05);
+  border-bottom-color: #0eb5ff
+}
+
+body[data-theme=blizzcon][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: rgba(14, 181, 255, .05)
+}
+
+body[data-theme=blizzcon] .ArticleSidebarItem {
+  background-color: rgba(14, 181, 255, .1)
+}
+
+body[data-theme=blizzcon] .ArticleSidebarItem.is-focused {
+  background-color: rgba(14, 181, 255, .3)
+}
+
+body[data-theme=blizzcon][data-device=desktop] .ArticleListItem:hover {
+  background-color: rgba(14, 181, 255, .05);
+  border-color: rgba(14, 181, 255, .5)
+}
+
+body[data-theme=blizzcon][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: rgba(14, 181, 255, .3)
+}
+
+body[data-theme=warcraft3] {
+  background-color: #2f2f2f
+}
+
+body[data-theme=warcraft3] a {
+  -webkit-tap-highlight-color: rgba(179, 179, 179, .3)
+}
+
+body[data-theme=warcraft3] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=warcraft3] .Navbar.is-auto {
+    background-color: hsla(0, 0%, 70%, .05)
+  }
+}
+
+body[data-theme=warcraft3] .Navigation {
+  background-color: hsla(0, 0%, 70%, .05)
+}
+
+body[data-theme=warcraft3] .Card.Card--transparent {
+  background-color: hsla(0, 0%, 70%, .15)
+}
+
+body[data-theme=warcraft3] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, hsla(0, 0%, 70%, .3), hsla(0, 0%, 70%, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=warcraft3][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=warcraft3][data-device=mobile] .Card.Card--transparent:active {
+  background-color: hsla(0, 0%, 70%, .3)
+}
+
+body[data-theme=warcraft3][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: hsla(0, 0%, 70%, .5)
+}
+
+body[data-theme=warcraft3][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: hsla(0, 0%, 70%, .3)
+}
+
+body[data-theme=warcraft3][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: hsla(0, 0%, 70%, .5)
+}
+
+body[data-theme=warcraft3] .ResponsiveBlogs blockquote {
+  border-left-color: #b3b3b3
+}
+
+body[data-theme=warcraft3] .ResponsiveBlogs .pullquote,
+body[data-theme=warcraft3] .ResponsiveBlogs blockquote {
+  background-color: hsla(0, 0%, 70%, .05)
+}
+
+body[data-theme=warcraft3] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-warcraft3-d6f0ed0694b11aed965ced751b594a7dfb6d349c71ca428ed7c651d8cb0e810c302e25b046923b6071a00d3008122144f613d7a9b417376c7ee48ead2dff6181.svg)
+}
+
+body[data-theme=warcraft3] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=warcraft3] .ResponsiveBlogs figure figcaption {
+  background-color: hsla(0, 0%, 70%, .05)
+}
+
+body[data-theme=warcraft3] .ResponsiveBlogs .blog_card {
+  background-color: hsla(0, 0%, 70%, .1)
+}
+
+body[data-theme=warcraft3] .ResponsiveBlogs .nav-tabs {
+  border-color: hsla(0, 0%, 70%, .1)
+}
+
+body[data-theme=warcraft3] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: hsla(0, 0%, 70%, .3)
+}
+
+body[data-theme=warcraft3] .ResponsiveBlogs .tab-content {
+  border-color: hsla(0, 0%, 70%, .1);
+  background-color: hsla(0, 0%, 70%, .05)
+}
+
+body[data-theme=warcraft3] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #b3b3b3;
+  border-bottom-color: hsla(0, 0%, 70%, .05)
+}
+
+body[data-theme=warcraft3] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: hsla(0, 0%, 70%, .1);
+  background-color: hsla(0, 0%, 70%, .05)
+}
+
+body[data-theme=warcraft3] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #b3b3b3
+}
+
+body[data-theme=warcraft3][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: hsla(0, 0%, 70%, .05)
+}
+
+body[data-theme=warcraft3][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: hsla(0, 0%, 70%, .1)
+}
+
+body[data-theme=warcraft3][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=warcraft3][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: hsla(0, 0%, 70%, .05);
+  border-bottom-color: #b3b3b3
+}
+
+body[data-theme=warcraft3][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: hsla(0, 0%, 70%, .05)
+}
+
+body[data-theme=warcraft3] .ArticleSidebarItem {
+  background-color: hsla(0, 0%, 70%, .1)
+}
+
+body[data-theme=warcraft3] .ArticleSidebarItem.is-focused {
+  background-color: hsla(0, 0%, 70%, .3)
+}
+
+body[data-theme=warcraft3][data-device=desktop] .ArticleListItem:hover {
+  background-color: hsla(0, 0%, 70%, .05);
+  border-color: hsla(0, 0%, 70%, .5)
+}
+
+body[data-theme=warcraft3][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: hsla(0, 0%, 70%, .3)
+}
+
+body[data-theme=battlenet] {
+  background-color: #15171e
+}
+
+body[data-theme=battlenet] a {
+  -webkit-tap-highlight-color: rgba(90, 93, 112, .3)
+}
+
+body[data-theme=battlenet] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=battlenet] .Navbar.is-auto {
+    background-color: rgba(90, 93, 112, .05)
+  }
+}
+
+body[data-theme=battlenet] .Navigation {
+  background-color: rgba(90, 93, 112, .05)
+}
+
+body[data-theme=battlenet] .Card.Card--transparent {
+  background-color: rgba(90, 93, 112, .15)
+}
+
+body[data-theme=battlenet] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(90, 93, 112, .3), rgba(90, 93, 112, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=battlenet][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=battlenet][data-device=mobile] .Card.Card--transparent:active {
+  background-color: rgba(90, 93, 112, .3)
+}
+
+body[data-theme=battlenet][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: rgba(90, 93, 112, .5)
+}
+
+body[data-theme=battlenet][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: rgba(90, 93, 112, .3)
+}
+
+body[data-theme=battlenet][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: rgba(90, 93, 112, .5)
+}
+
+body[data-theme=battlenet] .ResponsiveBlogs blockquote {
+  border-left-color: #5a5d70
+}
+
+body[data-theme=battlenet] .ResponsiveBlogs .pullquote,
+body[data-theme=battlenet] .ResponsiveBlogs blockquote {
+  background-color: rgba(90, 93, 112, .05)
+}
+
+body[data-theme=battlenet] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-battlenet.svg)
+}
+
+body[data-theme=battlenet] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=battlenet] .ResponsiveBlogs figure figcaption {
+  background-color: rgba(90, 93, 112, .05)
+}
+
+body[data-theme=battlenet] .ResponsiveBlogs .blog_card {
+  background-color: rgba(90, 93, 112, .1)
+}
+
+body[data-theme=battlenet] .ResponsiveBlogs .nav-tabs {
+  border-color: rgba(90, 93, 112, .1)
+}
+
+body[data-theme=battlenet] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: rgba(90, 93, 112, .3)
+}
+
+body[data-theme=battlenet] .ResponsiveBlogs .tab-content {
+  border-color: rgba(90, 93, 112, .1);
+  background-color: rgba(90, 93, 112, .05)
+}
+
+body[data-theme=battlenet] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #5a5d70;
+  border-bottom-color: rgba(90, 93, 112, .05)
+}
+
+body[data-theme=battlenet] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: rgba(90, 93, 112, .1);
+  background-color: rgba(90, 93, 112, .05)
+}
+
+body[data-theme=battlenet] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #5a5d70
+}
+
+body[data-theme=battlenet][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: rgba(90, 93, 112, .05)
+}
+
+body[data-theme=battlenet][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: rgba(90, 93, 112, .1)
+}
+
+body[data-theme=battlenet][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=battlenet][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: rgba(90, 93, 112, .05);
+  border-bottom-color: #5a5d70
+}
+
+body[data-theme=battlenet][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: rgba(90, 93, 112, .05)
+}
+
+body[data-theme=battlenet] .ArticleSidebarItem {
+  background-color: rgba(90, 93, 112, .1)
+}
+
+body[data-theme=battlenet] .ArticleSidebarItem.is-focused {
+  background-color: rgba(90, 93, 112, .3)
+}
+
+body[data-theme=battlenet][data-device=desktop] .ArticleListItem:hover {
+  background-color: rgba(90, 93, 112, .05);
+  border-color: rgba(90, 93, 112, .5)
+}
+
+body[data-theme=battlenet][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: rgba(90, 93, 112, .3)
+}
+
+body[data-theme=warcraftrumble] {
+  background-color: #38233b
+}
+
+body[data-theme=warcraftrumble] a {
+  -webkit-tap-highlight-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=warcraftrumble] .ArticleLink {
+  color: #fff
+}
+
+@media (min-width:768px) {
+  body[data-theme=warcraftrumble] .Navbar.is-auto {
+    background-color: rgba(65, 125, 255, .05)
+  }
+}
+
+body[data-theme=warcraftrumble] .Navigation {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=warcraftrumble] .Card.Card--transparent {
+  background-color: rgba(65, 125, 255, .15)
+}
+
+body[data-theme=warcraftrumble] .Card-imageWrapper:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(65, 125, 255, .3), rgba(65, 125, 255, 0) 50%);
+  transition: opacity .2s;
+  pointer-events: none
+}
+
+body[data-theme=warcraftrumble][data-device=mobile] .Card:active .Card-imageWrapper:after {
+  opacity: 1
+}
+
+body[data-theme=warcraftrumble][data-device=mobile] .Card.Card--transparent:active {
+  background-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=warcraftrumble][data-device=mobile] .Card.Card--innerBorder:active:after {
+  border-color: rgba(65, 125, 255, .5)
+}
+
+body[data-theme=warcraftrumble][data-device=desktop] .Card.Card--transparent:hover {
+  background-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=warcraftrumble][data-device=desktop] .Card.Card--innerBorder:hover:after {
+  border-color: rgba(65, 125, 255, .5)
+}
+
+body[data-theme=warcraftrumble] .ResponsiveBlogs blockquote {
+  border-left-color: #417dff
+}
+
+body[data-theme=warcraftrumble] .ResponsiveBlogs .pullquote,
+body[data-theme=warcraftrumble] .ResponsiveBlogs blockquote {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=warcraftrumble] .ResponsiveBlogs .list-custom li:before {
+  background-image: url(images/circle-battlenet.svg)
+}
+
+body[data-theme=warcraftrumble] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd),
+body[data-theme=warcraftrumble] .ResponsiveBlogs figure figcaption {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=warcraftrumble] .ResponsiveBlogs .blog_card {
+  background-color: rgba(65, 125, 255, .1)
+}
+
+body[data-theme=warcraftrumble] .ResponsiveBlogs .nav-tabs {
+  border-color: rgba(65, 125, 255, .1)
+}
+
+body[data-theme=warcraftrumble] .ResponsiveBlogs .nav-tabs>li {
+  border-bottom-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=warcraftrumble] .ResponsiveBlogs .tab-content {
+  border-color: rgba(65, 125, 255, .1);
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=warcraftrumble] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a {
+  border-left-color: #417dff;
+  border-bottom-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=warcraftrumble] .ResponsiveBlogs .panel-group .panel-collapse.collapse.in {
+  border-left-color: rgba(65, 125, 255, .1);
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=warcraftrumble] .ResponsiveBlogs #accordionImage .panel .panel-heading .panel-title a img {
+  border-left-color: #417dff
+}
+
+body[data-theme=warcraftrumble][data-device=desktop] .ResponsiveBlogs table>tbody>tr:hover {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=warcraftrumble][data-device=desktop] .ResponsiveBlogs .table-striped>tbody>tr:nth-of-type(odd):hover {
+  background-color: rgba(65, 125, 255, .1)
+}
+
+body[data-theme=warcraftrumble][data-device=desktop] .ResponsiveBlogs .nav-tabs>li.active,
+body[data-theme=warcraftrumble][data-device=desktop] .ResponsiveBlogs .nav-tabs>li:hover {
+  background-color: rgba(65, 125, 255, .05);
+  border-bottom-color: #417dff
+}
+
+body[data-theme=warcraftrumble][data-device=desktop] .ResponsiveBlogs .panel-group .panel .panel-heading .panel-title a.collapsed:hover {
+  background-color: rgba(65, 125, 255, .05)
+}
+
+body[data-theme=warcraftrumble] .ArticleSidebarItem {
+  background-color: rgba(65, 125, 255, .1)
+}
+
+body[data-theme=warcraftrumble] .ArticleSidebarItem.is-focused {
+  background-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=warcraftrumble][data-device=desktop] .ArticleListItem:hover {
+  background-color: rgba(65, 125, 255, .05);
+  border-color: rgba(65, 125, 255, .5)
+}
+
+body[data-theme=warcraftrumble][data-device=desktop] .ArticleSidebarItem:hover {
+  background-color: rgba(65, 125, 255, .3)
+}
+
+body[data-theme=error500] {
+  background-color: #241113
+}
+
+body[data-blizzard-app] {
+  background-color: initial
+}
+
+body[data-blizzard-app][data-theme=blizzard] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=blizzard] .ArticleSidebarItem:hover,
+body[data-blizzard-app][data-theme=default] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=default] .ArticleSidebarItem:hover {
+  background-color: rgba(0, 174, 255, .1)
+}
+
+body[data-blizzard-app][data-theme=diablo2] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=diablo2] .ArticleSidebarItem:hover {
+  background-color: rgba(181, 56, 26, .1)
+}
+
+body[data-blizzard-app][data-theme=diablo3] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=diablo3] .ArticleSidebarItem:hover {
+  background-color: rgba(195, 65, 51, .1)
+}
+
+body[data-blizzard-app][data-theme=diablo4] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=diablo4] .ArticleSidebarItem:hover,
+body[data-blizzard-app][data-theme=diablo-immortal] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=diablo-immortal] .ArticleSidebarItem:hover {
+  background-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-blizzard-app][data-theme=heroes-of-the-storm] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=heroes-of-the-storm] .ArticleSidebarItem:hover {
+  background-color: rgba(116, 42, 255, .1)
+}
+
+body[data-blizzard-app][data-theme=hearthstone] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=hearthstone] .ArticleSidebarItem:hover {
+  background-color: rgba(209, 121, 79, .1)
+}
+
+body[data-blizzard-app][data-theme=overwatch] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=overwatch] .ArticleSidebarItem:hover {
+  background-color: hsla(240, 6%, 55%, .1)
+}
+
+body[data-blizzard-app][data-theme=starcraft] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=starcraft] .ArticleSidebarItem:hover {
+  background-color: hsla(0, 0%, 100%, .1)
+}
+
+body[data-blizzard-app][data-theme=starcraft2] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=starcraft2] .ArticleSidebarItem:hover {
+  background-color: rgba(65, 125, 255, .1)
+}
+
+body[data-blizzard-app][data-theme=world-of-warcraft] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=world-of-warcraft] .ArticleSidebarItem:hover {
+  background-color: rgba(190, 97, 19, .1)
+}
+
+body[data-blizzard-app][data-theme=warcraft3] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=warcraft3] .ArticleSidebarItem:hover {
+  background-color: hsla(0, 0%, 70%, .1)
+}
+
+body[data-blizzard-app][data-theme=blizzcon] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=blizzcon] .ArticleSidebarItem:hover {
+  background-color: rgba(14, 181, 255, .1)
+}
+
+body[data-blizzard-app][data-theme=battlenet] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=battlenet] .ArticleSidebarItem:hover {
+  background-color: rgba(90, 93, 112, .1)
+}
+
+body[data-blizzard-app][data-theme=warcraftrumble] .ArticleSidebarItem.is-focused,
+body[data-blizzard-app][data-theme=warcraftrumble] .ArticleSidebarItem:hover {
+  background-color: rgba(65, 125, 255, .1)
+}
+
+body[data-blizzard-app] .Page-container {
+  overflow: hidden;
+  max-height: 100vh
+}
+
+body[data-blizzard-app] .Page-container #page-load-overlay {
+  top: 40px
+}
+
+body[data-blizzard-app] .Page-container #page-load-overlay:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px
+}
+
+body[data-blizzard-app] .Page-container .Backdrop {
+  display: none
+}
+
+body[data-blizzard-app] .Page-container .Navigation {
+  background-color: hsla(0, 0%, 100%, .05);
+  border-bottom: 1px solid hsla(0, 0%, 100%, .07)
+}
+
+body[data-blizzard-app] .Page-container .Navigation .Navigation-wrapper {
+  margin-left: 0;
+  margin-right: 0
+}
+
+body[data-blizzard-app] .Page-container .Page-content {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto
+}
+
+body[data-blizzard-app] .Page-container .Page-content[data-page-type=detail] .Pane-content {
+  margin: 0;
+  padding: 0
+}
+
+@media (min-width:992px) {
+  body[data-blizzard-app] .Page-container .Page-content[data-page-type=detail] .Pane-content #article-detail-container {
+    padding-left: 370px;
+    padding-right: 20px
+  }
+}
+
+@media (min-width:1200px) {
+  body[data-blizzard-app] .Page-container .Page-content[data-page-type=detail] .Pane-content #article-detail-container {
+    padding-left: 390px;
+    padding-right: 40px
+  }
+}
+
+body[data-blizzard-app] .Page-container .Page-content[data-page-type=detail] .Pane-content #article-detail-container #article-sidebar .ArticleSidebar {
+  animation-name: News-slide-right-fade-in;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 40px
+}
+
+body[data-blizzard-app] ::-webkit-scrollbar {
+  width: 18px;
+  height: 18px
+}
+
+body[data-blizzard-app] ::-webkit-scrollbar-button {
+  display: none
+}
+
+body[data-blizzard-app] ::-webkit-scrollbar-track,
+body[data-blizzard-app] ::-webkit-scrollbar-track-piece {
+  background-color: transparent
+}
+
+body[data-blizzard-app] ::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 7px 6px 7px 5px;
+  -webkit-border-image: url(images/blizzardApp/scrollbars/border-image-5fb2de8f8fea4ad7c83a2bbe87f3e7070cce9afafd84ea561567a79c0fdf6ac333f4eb8bd518138d78ab397e090181d4c7cc0ed8cb4955d4306f4e9dff2af7f2.png) 7 7 repeat
+}
+
+body[data-blizzard-app] ::-webkit-scrollbar-thumb:vertical {
+  min-height: 50px
+}
+
+body[data-blizzard-app] ::-webkit-scrollbar-thumb:horizontal {
+  min-width: 50px
+}
+
+body[data-blizzard-app] ::-webkit-scrollbar-thumb:hover {
+  -webkit-border-image: url(images/blizzardApp/scrollbars/border-image-hover-b91c5dc5d5bbf92360847e43809555f9463c715e0bb08eb76ea90c238c95d4f70e6952aa16679b3b5faef39443db72c55b41563ee96c322d73f9bf712fdbabb5.png) 7 7 repeat
+}
+
+body[data-blizzard-app] ::-webkit-resizer,
+body[data-blizzard-app] ::-webkit-scrollbar-corner {
+  background-color: transparent
+}
+
+body[data-blizzard-app] .ArticleSidebar .Scrollable-track {
+  border-left: 1px solid hsla(0, 0%, 100%, .07);
+  border-right: 1px solid hsla(0, 0%, 100%, .07);
+  border-radius: 0;
+  width: 7px
+}
+
+body[data-blizzard-app] .ArticleSidebar .Scrollable-track .Scrollable-thumb {
+  left: -1px;
+  width: 7px;
+  background: hsla(0, 0%, 100%, .15) no-repeat 50% 100%;
+  cursor: auto
+}
+
+body[data-blizzard-app] .ArticleSidebar .Scrollable-track .Scrollable-thumb:hover {
+  background: hsla(0, 0%, 100%, .3) no-repeat 50% 100%
+}
+
+body[data-blizzard-app] .ArticleSidebar .ArticleSidebarItem {
+  background-color: rgba(0, 0, 0, .1);
+  border-bottom: 1px solid hsla(0, 0%, 100%, .07)
+}
+
+body[data-blizzard-app] .ArticleSidebar .ArticleSidebarItem.BackButton:hover {
+  background-color: rgba(0, 0, 0, .1)
+}
+
+body[data-blizzard-app] .ArticleSidebar .ArticleSidebar-inner {
+  position: absolute;
+  height: unset;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0
+}
+
+body[data-blizzard-app] .ArticleSidebar .BackButton {
+  margin-right: 3px;
+  border-right: 1px solid hsla(0, 0%, 100%, .07)
+}
+
+body[data-blizzard-app] .ArticleSidebar .BackButton-linkWrapper {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px
+}
+
+body[data-blizzard-app] .ArticleSidebar .BackButton-linkWrapper .BackButton-link {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+
+body[data-blizzard-app] .BackButton-link {
+  padding-right: 10px
+}
+
+body[data-blizzard-app] .BackButton-link:hover .BackButton-homeIcon {
+  color: #fff
+}
+
+body[data-blizzard-app] .BackButton-link:hover .BackButton-chevronIcon {
+  color: hsla(0, 0%, 100%, .8)
+}
+
+body[data-blizzard-app] .BackButton-link .BackButton-homeIcon {
+  width: 27px;
+  height: 27px
+}
+
+body[data-blizzard-app] .BackButton-link .BackButton-chevronIcon {
+  width: 16px;
+  height: 14px;
+  color: hsla(0, 0%, 100%, .3)
+}
